@@ -1,5 +1,5 @@
 # POINT2SKILL
-# POLITIKAK EXEKUTATU AHAL IZATEKO
+## POLITIKAK EXEKUTATU AHAL IZATEKO
 
 1. Terminala
 
@@ -26,7 +26,7 @@ ros2 run franka_demo_recorder usb_cam_publisher --ros-args   -p device:=/dev/vid
 ros2 launch realsense2_camera rs_launch.py     camera_name:=camera_wrist     camera_namespace:=camera     serial_no:="'141122079579'"     enable_color:=true     enable_depth:=true     align_depth.enable:=true 
 
 
-# Gripperra ireki/itxi nahi bada
+## Gripperra ireki/itxi nahi bada
 
 source ~/franka_ros2_ws/install/setup.bash
 ros2 action send_goal /franka_gripper/franka_gripper/move franka_msgs/action/Move "{width: 0.08, speed: 0.1}"
@@ -35,11 +35,11 @@ source ~/franka_ros2_ws/install/setup.bash
 ros2 action send_goal /franka_gripper/franka_gripper/grasp franka_msgs/action/Grasp "{width: 0.0, speed: 0.1, force: 20.0, epsilon: {inner: 0.005, outer: 0.03}}"
 
 
-# Open bakarrik adb
+### Open bakarrik adb
 
 python3 eval_franka_2cam_contact.py   /home/labiiwa/Point2Skill_github/dit-policy/bc_finetune/open/wandb_None_franka_2cam_contact_resnet_gn_2026-06-09_14-25-12/open.ckpt   --gamma 1.0   --T 500   --action_idx 3   --lift_scale 2.0   --q_start -0.0714000016450882 -1.264799952507019 0.10849999636411667 -2.9293999671936035 0.1451999992132187 2.075200080871582 -2.3701999187469482
 
-# Hasierako puntua gorde nahi bada
+### Hasierako puntua gorde nahi bada
 
 cd dit-policy
 cd eval_scripts
