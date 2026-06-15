@@ -1,0 +1,3 @@
+source;share/data4robotics/hook/pythonpath.ps1
+source;share/data4robotics/hook/pythonpath.dsv
+source;share/data4robotics/hook/pythonpath.sh

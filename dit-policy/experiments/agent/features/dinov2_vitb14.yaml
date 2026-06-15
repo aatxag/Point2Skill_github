@@ -1,0 +1,4 @@
+_target_: data4robotics.models.dinov2.load_dinov2
+img_size: 252
+freeze: false
+restore_path: ''

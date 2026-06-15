@@ -1,0 +1,47 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Large binary / data files ─────────────────────────────────────────────────
+*.pkl
+*.pth
+*.ckpt
+*.pt
+*.bin
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# ── Training data & model weights directories ─────────────────────────────────
+dit-policy/data_robobuf/
+dit-policy/bc_finetune/
+dit-policy/visual_features/
+
+# ── colcon build artifacts ────────────────────────────────────────────────────
+vlm_service/build/
+vlm_service/install/
+vlm_service/log/
+
+# ── ROS2 / misc ───────────────────────────────────────────────────────────────
+.ros/
+*.bag
+*.db3
+
+# ── Editors & OS ──────────────────────────────────────────────────────────────
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── wandb run logs ────────────────────────────────────────────────────────────
+wandb/

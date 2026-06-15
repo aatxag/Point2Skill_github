@@ -1,0 +1,14 @@
+{
+  "camera": "cam0",
+  "frame_index": 65,
+  "u": 160,
+  "v": 110,
+  "image_file": "cam0_256/000065.jpg",
+  "selection_source": "auto_default",
+  "frame_mode": "closed_after_cmd",
+  "default_u": 160,
+  "default_v": 110,
+  "closed_threshold": null,
+  "gripper_cmd": -1,
+  "gripper_measured": 5.242431507213041e-05
+}
