@@ -2,6 +2,9 @@
 
 Project web-page: https://point2skill.github.io/Point2Skill-web/
 
+
+
+
 ## POLITIKAK EXEKUTATU AHAL IZATEKO
 
 1. Terminala
@@ -37,6 +40,9 @@ ros2 action send_goal /franka_gripper/franka_gripper/move franka_msgs/action/Mov
 source ~/franka_ros2_ws/install/setup.bash
 ros2 action send_goal /franka_gripper/franka_gripper/grasp franka_msgs/action/Grasp "{width: 0.0, speed: 0.1, force: 20.0, epsilon: {inner: 0.005, outer: 0.03}}"
 
+# Modelo bat bakarrik
+
+python3   eval_franka_2cam_contact.py   /home/labiiwa/Point2Skill_github/dit-policy/bc_finetune/generalization_twoposes/wandb_None_franka_2cam_contact_resnet_gn_2026-06-19_08-48-19/generalization_twoposes.ckpt   --gamma 1.0   --T 500   --action_idx 3   --auto_lift   --grasp_confirm_steps 3   --lift_trigger 0.04
 
 ### Open bakarrik adb
 
@@ -50,5 +56,8 @@ cd eval_scripts
 python3 eval_franka_2cam_contact_old.py   /home/labiiwa/dit-policy/bc_finetune/close/wandb_None_franka_2cam_contact_resnet_gn_2026-06-12_18-46-27/close.ckpt   --gamma 1.0 --T 500 --action_idx 3 --lift_scale 2.0
 
 
+# Web-a 
 
+https://point2skill.github.io/Point2Skill-web/
 
+git pull origin main

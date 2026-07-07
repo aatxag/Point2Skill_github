@@ -1,17 +1,20 @@
-1. PRIMITIBAK
-
-source ~/Point2Skill_github/vlm_service/install/setup.bash
-ros2 launch service_primitives primitives.launch.py
-
-2. PLANNERRA
-
-source ~/Point2Skill_github/vlm_service/install/setup.bash
-ros2 launch service_planner planner.launch.py
-
-3. LANGUAGE
+1. LANGUAGE
 
 source  ~/Point2Skill_github/vlm_service/install/setup.bash
 ros2 launch service_language language.launch.py
+
+2. PLANNERRA
+
+source /home/labiiwa/ros2_ws/install/setup.bash
+ros2 launch service_planner planner.launch.py
+
+3. PRIMITIBAK
+
+source ~/.bashrc
+ros2 launch service_primitives primitives.launch.py
+
+
+
 
 
 

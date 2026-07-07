@@ -14,7 +14,7 @@ ros2 launch franka_gripper gripper.launch.py robot_ip:=172.17.6.130 namespace:=f
 
 4. Terminala
 
-ros2 launch franka_demo_recorder record_demo_two_cam.launch.py task:=close  serial_wrist:="'141122079579'" usb_device:=/dev/video6
+ros2 launch franka_demo_recorder record_demo_two_cam.launch.py task:=pick_experiments  serial_wrist:="'141122079579'" usb_device:=/dev/video6
 
 ros2 launch franka_demo_recorder record_demo_two_cam_place.launch.py task:=close  serial_wrist:="'141122079579'" usb_device:=/dev/video6
 

@@ -1,0 +1,6802 @@
+{
+  "episode_0000": {
+    "frame_index": 69,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0000/cam0_depth/000069.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 280,
+    "depth_m": 0.28,
+    "point_cam_xyz": [
+      0.047721055673280686,
+      -0.0189239573398075,
+      0.28
+    ],
+    "point_ee_xyz": [
+      -0.05812468007206917,
+      -0.013561938889324665,
+      0.1826941817998886
+    ],
+    "point_base_xyz": [
+      0.5882860422134399,
+      0.07335643470287323,
+      0.07726762443780899
+    ],
+    "episode_name": "episode_0000",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0001": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0001/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 283,
+    "depth_m": 0.283,
+    "point_cam_xyz": [
+      0.04823235269835154,
+      -0.01912671402559115,
+      0.283
+    ],
+    "point_ee_xyz": [
+      -0.059832628816366196,
+      -0.01400034874677658,
+      0.18518280982971191
+    ],
+    "point_base_xyz": [
+      0.5965112447738647,
+      0.04088544473052025,
+      0.07939565181732178
+    ],
+    "episode_name": "episode_0001",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0002": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0002/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 290,
+    "depth_m": 0.29,
+    "point_cam_xyz": [
+      0.04942537909018356,
+      -0.01959981295908634,
+      0.29
+    ],
+    "point_ee_xyz": [
+      -0.0638178363442421,
+      -0.015023305080831051,
+      0.19098959863185883
+    ],
+    "point_base_xyz": [
+      0.6001128554344177,
+      0.05717594176530838,
+      0.07871513068675995
+    ],
+    "episode_name": "episode_0002",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0003": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0003/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 277,
+    "depth_m": 0.277,
+    "point_cam_xyz": [
+      0.04720975864820982,
+      -0.018721200654023853,
+      0.277
+    ],
+    "point_ee_xyz": [
+      -0.05641673505306244,
+      -0.01312352903187275,
+      0.1802055537700653
+    ],
+    "point_base_xyz": [
+      0.5793948769569397,
+      0.06411700695753098,
+      0.0764213353395462
+    ],
+    "episode_name": "episode_0003",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0004": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0004/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 285,
+    "depth_m": 0.285,
+    "point_cam_xyz": [
+      0.04857321738173212,
+      -0.019261885149446916,
+      0.285
+    ],
+    "point_ee_xyz": [
+      -0.06097126007080078,
+      -0.014292621985077858,
+      0.18684189021587372
+    ],
+    "point_base_xyz": [
+      0.5951979756355286,
+      0.06831061094999313,
+      0.07797478139400482
+    ],
+    "episode_name": "episode_0004",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0005": {
+    "frame_index": 51,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0005/cam0_depth/000051.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 269,
+    "depth_m": 0.269,
+    "point_cam_xyz": [
+      0.04584629991468751,
+      -0.01818051615860078,
+      0.269
+    ],
+    "point_ee_xyz": [
+      -0.0518622063100338,
+      -0.01195443607866764,
+      0.1735692322254181
+    ],
+    "point_base_xyz": [
+      0.5589800477027893,
+      0.04880136251449585,
+      0.076130211353302
+    ],
+    "episode_name": "episode_0005",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0006": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0006/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 274,
+    "depth_m": 0.274,
+    "point_cam_xyz": [
+      0.04669846162313896,
+      -0.0185184439682402,
+      0.274
+    ],
+    "point_ee_xyz": [
+      -0.05470878630876541,
+      -0.012685119174420834,
+      0.1777169406414032
+    ],
+    "point_base_xyz": [
+      0.5734851956367493,
+      0.07018376141786575,
+      0.07590757310390472
+    ],
+    "episode_name": "episode_0006",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0007": {
+    "frame_index": 51,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0007/cam0_depth/000051.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5086007714271545,
+      0.07319704443216324,
+      0.12965182960033417
+    ],
+    "episode_name": "episode_0007",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0008": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0008/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 264,
+    "depth_m": 0.264,
+    "point_cam_xyz": [
+      0.04499413820623607,
+      -0.01784258834896136,
+      0.264
+    ],
+    "point_ee_xyz": [
+      -0.049015626311302185,
+      -0.011223752982914448,
+      0.16942152380943298
+    ],
+    "point_base_xyz": [
+      0.5663573145866394,
+      0.06164013221859932,
+      0.07637234777212143
+    ],
+    "episode_name": "episode_0008",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0009": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0009/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 188,
+    "depth_m": 0.188,
+    "point_cam_xyz": [
+      0.032041280237774174,
+      -0.012706085642442178,
+      0.188
+    ],
+    "point_ee_xyz": [
+      -0.005747627466917038,
+      -0.00011736936721717939,
+      0.10637639462947845
+    ],
+    "point_base_xyz": [
+      0.510805606842041,
+      0.0722428560256958,
+      0.12938766181468964
+    ],
+    "episode_name": "episode_0009",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0010": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0010/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 193,
+    "depth_m": 0.193,
+    "point_cam_xyz": [
+      0.032893441946225614,
+      -0.0130440134520816,
+      0.193
+    ],
+    "point_ee_xyz": [
+      -0.008594206534326077,
+      -0.0008480524993501604,
+      0.11052409559488297
+    ],
+    "point_base_xyz": [
+      0.506230354309082,
+      0.06815123558044434,
+      0.1300313025712967
+    ],
+    "episode_name": "episode_0010",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0011": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0011/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5599828958511353,
+      0.06796286255121231,
+      0.07579424232244492
+    ],
+    "episode_name": "episode_0011",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0012": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0012/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.563922107219696,
+      0.07684892416000366,
+      0.07546398788690567
+    ],
+    "episode_name": "episode_0012",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0013": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0013/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.572589635848999,
+      0.07752169668674469,
+      0.07543909549713135
+    ],
+    "episode_name": "episode_0013",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0014": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0014/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 258,
+    "depth_m": 0.258,
+    "point_cam_xyz": [
+      0.04397154415609435,
+      -0.017437074977394055,
+      0.258
+    ],
+    "point_ee_xyz": [
+      -0.04559973254799843,
+      -0.010346933268010616,
+      0.16444428265094757
+    ],
+    "point_base_xyz": [
+      0.5543469786643982,
+      0.07869534194469452,
+      0.07549649477005005
+    ],
+    "episode_name": "episode_0014",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0015": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0015/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 276,
+    "depth_m": 0.276,
+    "point_cam_xyz": [
+      0.04703932630651954,
+      -0.018653615092095965,
+      0.276
+    ],
+    "point_ee_xyz": [
+      -0.0558474175632,
+      -0.01297739241272211,
+      0.179376021027565
+    ],
+    "point_base_xyz": [
+      0.5730010867118835,
+      0.07090766727924347,
+      0.07644768804311752
+    ],
+    "episode_name": "episode_0015",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0016": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0016/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 262,
+    "depth_m": 0.262,
+    "point_cam_xyz": [
+      0.044653273522855495,
+      -0.01770741722510559,
+      0.262
+    ],
+    "point_ee_xyz": [
+      -0.0478769950568676,
+      -0.01093147974461317,
+      0.16776244342327118
+    ],
+    "point_base_xyz": [
+      0.5459844470024109,
+      0.06469222903251648,
+      0.07444179058074951
+    ],
+    "episode_name": "episode_0016",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0017": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0017/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.5004570484161377,
+      0.06390140950679779,
+      0.1290733814239502
+    ],
+    "episode_name": "episode_0017",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0018": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0018/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 263,
+    "depth_m": 0.263,
+    "point_cam_xyz": [
+      0.04482370586454578,
+      -0.017775002787033475,
+      0.263
+    ],
+    "point_ee_xyz": [
+      -0.04844631254673004,
+      -0.01107761636376381,
+      0.16859197616577148
+    ],
+    "point_base_xyz": [
+      0.55158531665802,
+      0.0684971809387207,
+      0.07476034015417099
+    ],
+    "episode_name": "episode_0018",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0019": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0019/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      167,
+      123
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 303,
+    "depth_m": 0.303,
+    "point_cam_xyz": [
+      0.06331505077469247,
+      -0.00828050872651149,
+      0.303
+    ],
+    "point_ee_xyz": [
+      -0.06153908371925354,
+      -0.029464339837431908,
+      0.2076122760772705
+    ],
+    "point_base_xyz": [
+      0.5674470067024231,
+      0.05887586623430252,
+      0.05133763328194618
+    ],
+    "episode_name": "episode_0019",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0020": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0020/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      109
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 260,
+    "depth_m": 0.26,
+    "point_cam_xyz": [
+      0.04431240883947492,
+      -0.018377389107034466,
+      0.26
+    ],
+    "point_ee_xyz": [
+      -0.04743386432528496,
+      -0.010579722933471203,
+      0.16570211946964264
+    ],
+    "point_base_xyz": [
+      0.5388506650924683,
+      0.07615772634744644,
+      0.07352528721094131
+    ],
+    "episode_name": "episode_0020",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0021": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0021/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 195,
+    "depth_m": 0.195,
+    "point_cam_xyz": [
+      0.03323430662960619,
+      -0.013179184575937367,
+      0.195
+    ],
+    "point_ee_xyz": [
+      -0.009732837788760662,
+      -0.0011403257958590984,
+      0.11218318343162537
+    ],
+    "point_base_xyz": [
+      0.5153963565826416,
+      0.06790957599878311,
+      0.12985098361968994
+    ],
+    "episode_name": "episode_0021",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0022": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0022/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.5674465298652649,
+      0.06334330141544342,
+      0.07650812715291977
+    ],
+    "episode_name": "episode_0022",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0023": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0023/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 271,
+    "depth_m": 0.271,
+    "point_cam_xyz": [
+      0.0461871645980681,
+      -0.01831568728245655,
+      0.271
+    ],
+    "point_ee_xyz": [
+      -0.053000837564468384,
+      -0.012246709316968918,
+      0.1752283126115799
+    ],
+    "point_base_xyz": [
+      0.5729982852935791,
+      0.06606775522232056,
+      0.07636123895645142
+    ],
+    "episode_name": "episode_0023",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0024": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0024/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.5104974508285522,
+      0.06898622214794159,
+      0.13019631803035736
+    ],
+    "episode_name": "episode_0024",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0025": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0025/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.5365843176841736,
+      0.06361430138349533,
+      0.1307281255722046
+    ],
+    "episode_name": "episode_0025",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0026": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0026/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 270,
+    "depth_m": 0.27,
+    "point_cam_xyz": [
+      0.046016732256377806,
+      -0.018248101720528664,
+      0.27
+    ],
+    "point_ee_xyz": [
+      -0.05243152379989624,
+      -0.01210057269781828,
+      0.1743987649679184
+    ],
+    "point_base_xyz": [
+      0.5553015470504761,
+      0.07210949808359146,
+      0.0750485435128212
+    ],
+    "episode_name": "episode_0026",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0027": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0027/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 188,
+    "depth_m": 0.188,
+    "point_cam_xyz": [
+      0.032041280237774174,
+      -0.012706085642442178,
+      0.188
+    ],
+    "point_ee_xyz": [
+      -0.005747627466917038,
+      -0.00011736936721717939,
+      0.10637639462947845
+    ],
+    "point_base_xyz": [
+      0.5023688673973083,
+      0.06505316495895386,
+      0.13091051578521729
+    ],
+    "episode_name": "episode_0027",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0028": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0028/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 283,
+    "depth_m": 0.283,
+    "point_cam_xyz": [
+      0.04823235269835154,
+      -0.01912671402559115,
+      0.283
+    ],
+    "point_ee_xyz": [
+      -0.059832628816366196,
+      -0.01400034874677658,
+      0.18518280982971191
+    ],
+    "point_base_xyz": [
+      0.5921546220779419,
+      0.06820555031299591,
+      0.07738242298364639
+    ],
+    "episode_name": "episode_0028",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0029": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0029/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 272,
+    "depth_m": 0.272,
+    "point_cam_xyz": [
+      0.04635759693975838,
+      -0.01838327284438443,
+      0.272
+    ],
+    "point_ee_xyz": [
+      -0.053570155054330826,
+      -0.012392845936119556,
+      0.1760578602552414
+    ],
+    "point_base_xyz": [
+      0.5653810501098633,
+      0.07289549708366394,
+      0.07586120814085007
+    ],
+    "episode_name": "episode_0029",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0030": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0030/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 265,
+    "depth_m": 0.265,
+    "point_cam_xyz": [
+      0.04516457054792636,
+      -0.01791017391088924,
+      0.265
+    ],
+    "point_ee_xyz": [
+      -0.04958494380116463,
+      -0.011369889602065086,
+      0.17025107145309448
+    ],
+    "point_base_xyz": [
+      0.5650732517242432,
+      0.06478295475244522,
+      0.07626461982727051
+    ],
+    "episode_name": "episode_0030",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0031": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0031/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      161,
+      109
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 256,
+    "depth_m": 0.256,
+    "point_cam_xyz": [
+      0.04503971158873876,
+      -0.01809466004384932,
+      0.256
+    ],
+    "point_ee_xyz": [
+      -0.0452493317425251,
+      -0.011401022784411907,
+      0.16236113011837006
+    ],
+    "point_base_xyz": [
+      0.5381719470024109,
+      0.06467370688915253,
+      0.07475460320711136
+    ],
+    "episode_name": "episode_0031",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0032": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0032/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 267,
+    "depth_m": 0.267,
+    "point_cam_xyz": [
+      0.045505435231306936,
+      -0.01804534503474501,
+      0.267
+    ],
+    "point_ee_xyz": [
+      -0.05072357505559921,
+      -0.011662162840366364,
+      0.1719101518392563
+    ],
+    "point_base_xyz": [
+      0.5482656955718994,
+      0.06413449347019196,
+      0.07540899515151978
+    ],
+    "episode_name": "episode_0032",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0033": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0033/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.5516711473464966,
+      0.06810861080884933,
+      0.07583607733249664
+    ],
+    "episode_name": "episode_0033",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0034": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0034/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 264,
+    "depth_m": 0.264,
+    "point_cam_xyz": [
+      0.04499413820623607,
+      -0.01784258834896136,
+      0.264
+    ],
+    "point_ee_xyz": [
+      -0.049015626311302185,
+      -0.011223752982914448,
+      0.16942152380943298
+    ],
+    "point_base_xyz": [
+      0.5841222405433655,
+      0.060028281062841415,
+      0.0774388462305069
+    ],
+    "episode_name": "episode_0034",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0035": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0035/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 269,
+    "depth_m": 0.269,
+    "point_cam_xyz": [
+      0.04584629991468751,
+      -0.01818051615860078,
+      0.269
+    ],
+    "point_ee_xyz": [
+      -0.0518622063100338,
+      -0.01195443607866764,
+      0.1735692322254181
+    ],
+    "point_base_xyz": [
+      0.5971137285232544,
+      0.07523975521326065,
+      0.076933354139328
+    ],
+    "episode_name": "episode_0035",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0036": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0036/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      159,
+      110
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 274,
+    "depth_m": 0.274,
+    "point_cam_xyz": [
+      0.04519035693645596,
+      -0.0185184439682402,
+      0.274
+    ],
+    "point_ee_xyz": [
+      -0.05459808185696602,
+      -0.011181402951478958,
+      0.1777479648590088
+    ],
+    "point_base_xyz": [
+      0.5720299482345581,
+      0.0688934326171875,
+      0.07485225051641464
+    ],
+    "episode_name": "episode_0036",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0037": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0037/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      149,
+      100
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 279,
+    "depth_m": 0.279,
+    "point_cam_xyz": [
+      0.030658750034400203,
+      -0.02749617557072252,
+      0.279
+    ],
+    "point_ee_xyz": [
+      -0.06377863883972168,
+      0.004065220709890127,
+      0.1779065728187561
+    ],
+    "point_base_xyz": [
+      0.5679190754890442,
+      0.08290058374404907,
+      0.07282762974500656
+    ],
+    "episode_name": "episode_0037",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0038": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0038/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.5007107257843018,
+      0.06083393469452858,
+      0.12905965745449066
+    ],
+    "episode_name": "episode_0038",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0039": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0039/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5610924363136292,
+      0.04989594593644142,
+      0.0758090615272522
+    ],
+    "episode_name": "episode_0039",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0040": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0040/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 265,
+    "depth_m": 0.265,
+    "point_cam_xyz": [
+      0.04516457054792636,
+      -0.01791017391088924,
+      0.265
+    ],
+    "point_ee_xyz": [
+      -0.04958494380116463,
+      -0.011369889602065086,
+      0.17025107145309448
+    ],
+    "point_base_xyz": [
+      0.5534369349479675,
+      0.07538910955190659,
+      0.07490132004022598
+    ],
+    "episode_name": "episode_0040",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0041": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0041/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      161,
+      110
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 197,
+    "depth_m": 0.197,
+    "point_cam_xyz": [
+      0.034659465558521625,
+      -0.013314355699793137,
+      0.197
+    ],
+    "point_ee_xyz": [
+      -0.010951063595712185,
+      -0.002513737650588155,
+      0.11381994932889938
+    ],
+    "point_base_xyz": [
+      0.5194470286369324,
+      0.07620175182819366,
+      0.13008780777454376
+    ],
+    "episode_name": "episode_0041",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0042": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0042/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 264,
+    "depth_m": 0.264,
+    "point_cam_xyz": [
+      0.04499413820623607,
+      -0.01784258834896136,
+      0.264
+    ],
+    "point_ee_xyz": [
+      -0.049015626311302185,
+      -0.011223752982914448,
+      0.16942152380943298
+    ],
+    "point_base_xyz": [
+      0.5715274810791016,
+      0.07427626848220825,
+      0.07651141285896301
+    ],
+    "episode_name": "episode_0042",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0043": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0043/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 257,
+    "depth_m": 0.257,
+    "point_cam_xyz": [
+      0.043801111814404055,
+      -0.01736948941546617,
+      0.257
+    ],
+    "point_ee_xyz": [
+      -0.045030418783426285,
+      -0.010200796648859978,
+      0.16361473500728607
+    ],
+    "point_base_xyz": [
+      0.5594220161437988,
+      0.0740993469953537,
+      0.0756860300898552
+    ],
+    "episode_name": "episode_0043",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0044": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0044/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 267,
+    "depth_m": 0.267,
+    "point_cam_xyz": [
+      0.045505435231306936,
+      -0.01804534503474501,
+      0.267
+    ],
+    "point_ee_xyz": [
+      -0.05072357505559921,
+      -0.011662162840366364,
+      0.1719101518392563
+    ],
+    "point_base_xyz": [
+      0.5836504697799683,
+      0.05906899645924568,
+      0.077530637383461
+    ],
+    "episode_name": "episode_0044",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0045": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0045/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 266,
+    "depth_m": 0.266,
+    "point_cam_xyz": [
+      0.04533500288961665,
+      -0.017977759472817125,
+      0.266
+    ],
+    "point_ee_xyz": [
+      -0.05015426129102707,
+      -0.011516026221215725,
+      0.1710806041955948
+    ],
+    "point_base_xyz": [
+      0.5712155699729919,
+      0.07300814986228943,
+      0.07582022994756699
+    ],
+    "episode_name": "episode_0045",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0046": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0046/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 271,
+    "depth_m": 0.271,
+    "point_cam_xyz": [
+      0.0461871645980681,
+      -0.01831568728245655,
+      0.271
+    ],
+    "point_ee_xyz": [
+      -0.053000837564468384,
+      -0.012246709316968918,
+      0.1752283126115799
+    ],
+    "point_base_xyz": [
+      0.5739819407463074,
+      0.07394731789827347,
+      0.07640038430690765
+    ],
+    "episode_name": "episode_0046",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0047": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0047/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      161,
+      110
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 261,
+    "depth_m": 0.261,
+    "point_cam_xyz": [
+      0.045919393455706316,
+      -0.017639831663177705,
+      0.261
+    ],
+    "point_ee_xyz": [
+      -0.04741313308477402,
+      -0.012217714451253414,
+      0.1669033318758011
+    ],
+    "point_base_xyz": [
+      0.5450664162635803,
+      0.06792004406452179,
+      0.07466938346624374
+    ],
+    "episode_name": "episode_0047",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0048": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0048/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 270,
+    "depth_m": 0.27,
+    "point_cam_xyz": [
+      0.046016732256377806,
+      -0.018248101720528664,
+      0.27
+    ],
+    "point_ee_xyz": [
+      -0.05243152379989624,
+      -0.01210057269781828,
+      0.1743987649679184
+    ],
+    "point_base_xyz": [
+      0.5524555444717407,
+      0.061718448996543884,
+      0.07550054043531418
+    ],
+    "episode_name": "episode_0048",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0049": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0049/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 273,
+    "depth_m": 0.273,
+    "point_cam_xyz": [
+      0.046528029281448675,
+      -0.018450858406312314,
+      0.273
+    ],
+    "point_ee_xyz": [
+      -0.05413946881890297,
+      -0.012538982555270195,
+      0.1768873929977417
+    ],
+    "point_base_xyz": [
+      0.5653494596481323,
+      0.050275374203920364,
+      0.07700220495462418
+    ],
+    "episode_name": "episode_0049",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0050": {
+    "frame_index": 49,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0050/cam0_depth/000049.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 302,
+    "depth_m": 0.302,
+    "point_cam_xyz": [
+      0.05147056719046702,
+      -0.020410839702220945,
+      0.302
+    ],
+    "point_ee_xyz": [
+      -0.0706496313214302,
+      -0.01677694544196129,
+      0.20094409584999084
+    ],
+    "point_base_xyz": [
+      0.5856850147247314,
+      0.07703091204166412,
+      0.07632732391357422
+    ],
+    "episode_name": "episode_0050",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0051": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0051/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 265,
+    "depth_m": 0.265,
+    "point_cam_xyz": [
+      0.04516457054792636,
+      -0.01791017391088924,
+      0.265
+    ],
+    "point_ee_xyz": [
+      -0.04958494380116463,
+      -0.011369889602065086,
+      0.17025107145309448
+    ],
+    "point_base_xyz": [
+      0.5546450018882751,
+      0.057332199066877365,
+      0.07539144903421402
+    ],
+    "episode_name": "episode_0051",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0052": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0052/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5625942945480347,
+      0.05511046200990677,
+      0.07670194655656815
+    ],
+    "episode_name": "episode_0052",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0053": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0053/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 271,
+    "depth_m": 0.271,
+    "point_cam_xyz": [
+      0.0461871645980681,
+      -0.01831568728245655,
+      0.271
+    ],
+    "point_ee_xyz": [
+      -0.053000837564468384,
+      -0.012246709316968918,
+      0.1752283126115799
+    ],
+    "point_base_xyz": [
+      0.5557393431663513,
+      0.06150027737021446,
+      0.0752752274274826
+    ],
+    "episode_name": "episode_0053",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0054": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0054/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5250627398490906,
+      0.06645569205284119,
+      0.07423316687345505
+    ],
+    "episode_name": "episode_0054",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0055": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0055/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 278,
+    "depth_m": 0.278,
+    "point_cam_xyz": [
+      0.04738019098990011,
+      -0.018788786215951734,
+      0.278
+    ],
+    "point_ee_xyz": [
+      -0.05698604881763458,
+      -0.013269665651023388,
+      0.1810351014137268
+    ],
+    "point_base_xyz": [
+      0.5749688148498535,
+      0.07654682546854019,
+      0.0765342116355896
+    ],
+    "episode_name": "episode_0055",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0056": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0056/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5507182478904724,
+      0.06662403792142868,
+      0.07465509325265884
+    ],
+    "episode_name": "episode_0056",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0057": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0057/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 290,
+    "depth_m": 0.29,
+    "point_cam_xyz": [
+      0.04942537909018356,
+      -0.01959981295908634,
+      0.29
+    ],
+    "point_ee_xyz": [
+      -0.0638178363442421,
+      -0.015023305080831051,
+      0.19098959863185883
+    ],
+    "point_base_xyz": [
+      0.5888574123382568,
+      0.06398740410804749,
+      0.07764923572540283
+    ],
+    "episode_name": "episode_0057",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0058": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0058/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5165459513664246,
+      0.07250351458787918,
+      0.12969891726970673
+    ],
+    "episode_name": "episode_0058",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0059": {
+    "frame_index": 63,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0059/cam0_depth/000063.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 261,
+    "depth_m": 0.261,
+    "point_cam_xyz": [
+      0.0444828411811652,
+      -0.017639831663177705,
+      0.261
+    ],
+    "point_ee_xyz": [
+      -0.047307681292295456,
+      -0.010785343125462532,
+      0.16693289577960968
+    ],
+    "point_base_xyz": [
+      0.5391185283660889,
+      0.0745643749833107,
+      0.07388483732938766
+    ],
+    "episode_name": "episode_0059",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0060": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0060/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 262,
+    "depth_m": 0.262,
+    "point_cam_xyz": [
+      0.044653273522855495,
+      -0.01770741722510559,
+      0.262
+    ],
+    "point_ee_xyz": [
+      -0.0478769950568676,
+      -0.01093147974461317,
+      0.16776244342327118
+    ],
+    "point_base_xyz": [
+      0.5466001033782959,
+      0.06323836743831635,
+      0.07520879805088043
+    ],
+    "episode_name": "episode_0060",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0061": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0061/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5755837559700012,
+      0.05147325247526169,
+      0.0780392438173294
+    ],
+    "episode_name": "episode_0061",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0062": {
+    "frame_index": 62,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0062/cam0_depth/000062.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 256,
+    "depth_m": 0.256,
+    "point_cam_xyz": [
+      0.04363067947271377,
+      -0.017301903853538286,
+      0.256
+    ],
+    "point_ee_xyz": [
+      -0.04446110129356384,
+      -0.01005466002970934,
+      0.16278518736362457
+    ],
+    "point_base_xyz": [
+      0.5493660569190979,
+      0.06512706726789474,
+      0.07410832494497299
+    ],
+    "episode_name": "episode_0062",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0063": {
+    "frame_index": 66,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0063/cam0_depth/000066.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 263,
+    "depth_m": 0.263,
+    "point_cam_xyz": [
+      0.04482370586454578,
+      -0.017775002787033475,
+      0.263
+    ],
+    "point_ee_xyz": [
+      -0.04844631254673004,
+      -0.01107761636376381,
+      0.16859197616577148
+    ],
+    "point_base_xyz": [
+      0.5566692352294922,
+      0.07586285471916199,
+      0.07528449594974518
+    ],
+    "episode_name": "episode_0063",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0064": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0064/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 278,
+    "depth_m": 0.278,
+    "point_cam_xyz": [
+      0.04738019098990011,
+      -0.018788786215951734,
+      0.278
+    ],
+    "point_ee_xyz": [
+      -0.05698604881763458,
+      -0.013269665651023388,
+      0.1810351014137268
+    ],
+    "point_base_xyz": [
+      0.5866234302520752,
+      0.05372919142246246,
+      0.07773920148611069
+    ],
+    "episode_name": "episode_0064",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0065": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0065/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5531953573226929,
+      0.057553481310606,
+      0.0753336250782013
+    ],
+    "episode_name": "episode_0065",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0066": {
+    "frame_index": 62,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0066/cam0_depth/000062.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 279,
+    "depth_m": 0.279,
+    "point_cam_xyz": [
+      0.047550623331590394,
+      -0.01885637177787962,
+      0.279
+    ],
+    "point_ee_xyz": [
+      -0.057555366307497025,
+      -0.013415802270174026,
+      0.1818646341562271
+    ],
+    "point_base_xyz": [
+      0.5647723078727722,
+      0.06910685449838638,
+      0.07502605766057968
+    ],
+    "episode_name": "episode_0066",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0067": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0067/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.5264397859573364,
+      0.06288541853427887,
+      0.1319793164730072
+    ],
+    "episode_name": "episode_0067",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0068": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0068/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 267,
+    "depth_m": 0.267,
+    "point_cam_xyz": [
+      0.045505435231306936,
+      -0.01804534503474501,
+      0.267
+    ],
+    "point_ee_xyz": [
+      -0.05072357505559921,
+      -0.011662162840366364,
+      0.1719101518392563
+    ],
+    "point_base_xyz": [
+      0.5672221779823303,
+      0.07283676415681839,
+      0.07586145401000977
+    ],
+    "episode_name": "episode_0068",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0069": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0069/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 203,
+    "depth_m": 0.203,
+    "point_cam_xyz": [
+      0.034597765363128495,
+      -0.013719869071360438,
+      0.203
+    ],
+    "point_ee_xyz": [
+      -0.014287364669144154,
+      -0.002309418749064207,
+      0.11881951242685318
+    ],
+    "point_base_xyz": [
+      0.5156732201576233,
+      0.07955408096313477,
+      0.12991908192634583
+    ],
+    "episode_name": "episode_0069",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0070": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0070/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 281,
+    "depth_m": 0.281,
+    "point_cam_xyz": [
+      0.04789148801497097,
+      -0.018991542901735388,
+      0.281
+    ],
+    "point_ee_xyz": [
+      -0.05869399756193161,
+      -0.013708075508475304,
+      0.1835237294435501
+    ],
+    "point_base_xyz": [
+      0.5682427883148193,
+      0.08926532417535782,
+      0.0747976005077362
+    ],
+    "episode_name": "episode_0070",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0071": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0071/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5066704154014587,
+      0.06878563016653061,
+      0.13063757121562958
+    ],
+    "episode_name": "episode_0071",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0072": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0072/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.515971302986145,
+      0.057741470634937286,
+      0.12915293872356415
+    ],
+    "episode_name": "episode_0072",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0073": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0073/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 265,
+    "depth_m": 0.265,
+    "point_cam_xyz": [
+      0.04516457054792636,
+      -0.01791017391088924,
+      0.265
+    ],
+    "point_ee_xyz": [
+      -0.04958494380116463,
+      -0.011369889602065086,
+      0.17025107145309448
+    ],
+    "point_base_xyz": [
+      0.5674381852149963,
+      0.06079098582267761,
+      0.07646220922470093
+    ],
+    "episode_name": "episode_0073",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0074": {
+    "frame_index": 64,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0074/cam0_depth/000064.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 209,
+    "depth_m": 0.209,
+    "point_cam_xyz": [
+      0.03562035941327023,
+      -0.01412538244292774,
+      0.209
+    ],
+    "point_ee_xyz": [
+      -0.017703259363770485,
+      -0.0031862384639680386,
+      0.12379676103591919
+    ],
+    "point_base_xyz": [
+      0.5297268033027649,
+      0.07120577991008759,
+      0.13149532675743103
+    ],
+    "episode_name": "episode_0074",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0075": {
+    "frame_index": 67,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0075/cam0_depth/000067.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.5310293436050415,
+      0.04400818049907684,
+      0.13233962655067444
+    ],
+    "episode_name": "episode_0075",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0076": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0076/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.5767192244529724,
+      0.03764722868800163,
+      0.07828888297080994
+    ],
+    "episode_name": "episode_0076",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0077": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0077/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5221676826477051,
+      0.051688842475414276,
+      0.1304904818534851
+    ],
+    "episode_name": "episode_0077",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0078": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0078/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5745018124580383,
+      0.06550206989049911,
+      0.07522987574338913
+    ],
+    "episode_name": "episode_0078",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0079": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0079/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 189,
+    "depth_m": 0.189,
+    "point_cam_xyz": [
+      0.03221171257946446,
+      -0.012773671204370061,
+      0.189
+    ],
+    "point_ee_xyz": [
+      -0.006316943094134331,
+      -0.0002635059936437756,
+      0.10720593482255936
+    ],
+    "point_base_xyz": [
+      0.5113202333450317,
+      0.060207802802324295,
+      0.12918269634246826
+    ],
+    "episode_name": "episode_0079",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0080": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0080/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 194,
+    "depth_m": 0.194,
+    "point_cam_xyz": [
+      0.0330638742879159,
+      -0.013111599014009483,
+      0.194
+    ],
+    "point_ee_xyz": [
+      -0.00916352216154337,
+      -0.0009941891767084599,
+      0.11135363578796387
+    ],
+    "point_base_xyz": [
+      0.5371677875518799,
+      0.06660399585962296,
+      0.13045741617679596
+    ],
+    "episode_name": "episode_0080",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0081": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0081/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 276,
+    "depth_m": 0.276,
+    "point_cam_xyz": [
+      0.04703932630651954,
+      -0.017798924824416883,
+      0.276
+    ],
+    "point_ee_xyz": [
+      -0.055109117180109024,
+      -0.013040537014603615,
+      0.17980195581912994
+    ],
+    "point_base_xyz": [
+      0.5947468876838684,
+      0.06646611541509628,
+      0.07784140855073929
+    ],
+    "episode_name": "episode_0081",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0082": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0082/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 197,
+    "depth_m": 0.197,
+    "point_cam_xyz": [
+      0.03357517131298677,
+      -0.013314355699793137,
+      0.197
+    ],
+    "point_ee_xyz": [
+      -0.010871469974517822,
+      -0.0014325990341603756,
+      0.11384226381778717
+    ],
+    "point_base_xyz": [
+      0.5315366387367249,
+      0.06694348901510239,
+      0.13008446991443634
+    ],
+    "episode_name": "episode_0082",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0083": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0083/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5325232744216919,
+      0.06947605311870575,
+      0.13007090985774994
+    ],
+    "episode_name": "episode_0083",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0084": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0084/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.525534987449646,
+      0.05952854081988335,
+      0.13054808974266052
+    ],
+    "episode_name": "episode_0084",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0085": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0085/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 186,
+    "depth_m": 0.186,
+    "point_cam_xyz": [
+      0.031700415554393596,
+      -0.012570914518586412,
+      0.186
+    ],
+    "point_ee_xyz": [
+      -0.004608995746821165,
+      0.0001749038783600554,
+      0.10471730679273605
+    ],
+    "point_base_xyz": [
+      0.5161450505256653,
+      0.06379044055938721,
+      0.13018707931041718
+    ],
+    "episode_name": "episode_0085",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0086": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0086/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 188,
+    "depth_m": 0.188,
+    "point_cam_xyz": [
+      0.032041280237774174,
+      -0.012706085642442178,
+      0.188
+    ],
+    "point_ee_xyz": [
+      -0.005747627466917038,
+      -0.00011736936721717939,
+      0.10637639462947845
+    ],
+    "point_base_xyz": [
+      0.49752944707870483,
+      0.06373301893472672,
+      0.12862621247768402
+    ],
+    "episode_name": "episode_0086",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0087": {
+    "frame_index": 51,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0087/cam0_depth/000051.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5662891268730164,
+      0.06272665411233902,
+      0.07634375989437103
+    ],
+    "episode_name": "episode_0087",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0088": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0088/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5251859426498413,
+      0.06711993366479874,
+      0.12942954897880554
+    ],
+    "episode_name": "episode_0088",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0089": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0089/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 193,
+    "depth_m": 0.193,
+    "point_cam_xyz": [
+      0.032893441946225614,
+      -0.0130440134520816,
+      0.193
+    ],
+    "point_ee_xyz": [
+      -0.008594206534326077,
+      -0.0008480524993501604,
+      0.11052409559488297
+    ],
+    "point_base_xyz": [
+      0.5255507230758667,
+      0.06232862547039986,
+      0.13100138306617737
+    ],
+    "episode_name": "episode_0089",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0090": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0090/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 202,
+    "depth_m": 0.202,
+    "point_cam_xyz": [
+      0.03442733302143821,
+      -0.013026749328015255,
+      0.202
+    ],
+    "point_ee_xyz": [
+      -0.013177699409425259,
+      -0.0022094964515417814,
+      0.11830170452594757
+    ],
+    "point_base_xyz": [
+      0.5404064059257507,
+      0.07906472682952881,
+      0.13138534128665924
+    ],
+    "episode_name": "episode_0090",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0091": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0091/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      109
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 254,
+    "depth_m": 0.254,
+    "point_cam_xyz": [
+      0.04328981478933319,
+      -0.01795329551225675,
+      0.254
+    ],
+    "point_ee_xyz": [
+      -0.04400191828608513,
+      -0.00970427505671978,
+      0.1607341319322586
+    ],
+    "point_base_xyz": [
+      0.5312486290931702,
+      0.07720697671175003,
+      0.07330559939146042
+    ],
+    "episode_name": "episode_0091",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0092": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0092/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 196,
+    "depth_m": 0.196,
+    "point_cam_xyz": [
+      0.03340473897129648,
+      -0.01324677013786525,
+      0.196
+    ],
+    "point_ee_xyz": [
+      -0.010302153415977955,
+      -0.001286462415009737,
+      0.11301272362470627
+    ],
+    "point_base_xyz": [
+      0.5410474538803101,
+      0.06590383499860764,
+      0.1307157725095749
+    ],
+    "episode_name": "episode_0092",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0093": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0093/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 272,
+    "depth_m": 0.272,
+    "point_cam_xyz": [
+      0.04635759693975838,
+      -0.01838327284438443,
+      0.272
+    ],
+    "point_ee_xyz": [
+      -0.053570155054330826,
+      -0.012392845936119556,
+      0.1760578602552414
+    ],
+    "point_base_xyz": [
+      0.5725935101509094,
+      0.07796694338321686,
+      0.07506393641233444
+    ],
+    "episode_name": "episode_0093",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0094": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0094/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 272,
+    "depth_m": 0.272,
+    "point_cam_xyz": [
+      0.04635759693975838,
+      -0.01838327284438443,
+      0.272
+    ],
+    "point_ee_xyz": [
+      -0.053570155054330826,
+      -0.012392845936119556,
+      0.1760578602552414
+    ],
+    "point_base_xyz": [
+      0.5661625862121582,
+      0.07228624075651169,
+      0.07566098868846893
+    ],
+    "episode_name": "episode_0094",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0095": {
+    "frame_index": 63,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0095/cam0_depth/000063.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 262,
+    "depth_m": 0.262,
+    "point_cam_xyz": [
+      0.044653273522855495,
+      -0.01770741722510559,
+      0.262
+    ],
+    "point_ee_xyz": [
+      -0.0478769950568676,
+      -0.01093147974461317,
+      0.16776244342327118
+    ],
+    "point_base_xyz": [
+      0.5732490420341492,
+      0.07577010989189148,
+      0.07727274298667908
+    ],
+    "episode_name": "episode_0095",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0096": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0096/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 174,
+    "depth_m": 0.174,
+    "point_cam_xyz": [
+      0.029655227454110138,
+      -0.011759887775451802,
+      0.174
+    ],
+    "point_ee_xyz": [
+      0.0022227936424314976,
+      0.0019285434391349554,
+      0.09476281702518463
+    ],
+    "point_base_xyz": [
+      0.502968430519104,
+      0.07566136866807938,
+      0.12925532460212708
+    ],
+    "episode_name": "episode_0096",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0097": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0097/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 183,
+    "depth_m": 0.183,
+    "point_cam_xyz": [
+      0.031189118529322733,
+      -0.012368157832802758,
+      0.183
+    ],
+    "point_ee_xyz": [
+      -0.0029010483995079994,
+      0.0006133137503638864,
+      0.10222868621349335
+    ],
+    "point_base_xyz": [
+      0.49974939227104187,
+      0.06811696290969849,
+      0.12860815227031708
+    ],
+    "episode_name": "episode_0097",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0098": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0098/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5216540694236755,
+      0.07310076057910919,
+      0.1300126165151596
+    ],
+    "episode_name": "episode_0098",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0099": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0099/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 182,
+    "depth_m": 0.182,
+    "point_cam_xyz": [
+      0.031018686187632444,
+      -0.012300572270874876,
+      0.182
+    ],
+    "point_ee_xyz": [
+      -0.0023317327722907066,
+      0.0007594503695145249,
+      0.10139914602041245
+    ],
+    "point_base_xyz": [
+      0.521001935005188,
+      0.0763619989156723,
+      0.13007241487503052
+    ],
+    "episode_name": "episode_0099",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0100": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0100/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 176,
+    "depth_m": 0.176,
+    "point_cam_xyz": [
+      0.029996092137490712,
+      -0.011895058899307571,
+      0.176
+    ],
+    "point_ee_xyz": [
+      0.0010841620387509465,
+      0.0016362700844183564,
+      0.09642189741134644
+    ],
+    "point_base_xyz": [
+      0.4913322627544403,
+      0.07108872383832932,
+      0.12775635719299316
+    ],
+    "episode_name": "episode_0100",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0101": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0101/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 186,
+    "depth_m": 0.186,
+    "point_cam_xyz": [
+      0.031700415554393596,
+      -0.012570914518586412,
+      0.186
+    ],
+    "point_ee_xyz": [
+      -0.004608995746821165,
+      0.0001749038783600554,
+      0.10471730679273605
+    ],
+    "point_base_xyz": [
+      0.5079293847084045,
+      0.06874707341194153,
+      0.12955251336097717
+    ],
+    "episode_name": "episode_0101",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0102": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0102/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 177,
+    "depth_m": 0.177,
+    "point_cam_xyz": [
+      0.030166524479181,
+      -0.011962644461235454,
+      0.177
+    ],
+    "point_ee_xyz": [
+      0.0005148462951183319,
+      0.0014901334652677178,
+      0.09725143760442734
+    ],
+    "point_base_xyz": [
+      0.5182417631149292,
+      0.06375528872013092,
+      0.13019751012325287
+    ],
+    "episode_name": "episode_0102",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0103": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0103/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.5162940621376038,
+      0.0737551674246788,
+      0.13006237149238586
+    ],
+    "episode_name": "episode_0103",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0104": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0104/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.509834349155426,
+      0.07206648588180542,
+      0.12959222495555878
+    ],
+    "episode_name": "episode_0104",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0105": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0105/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 182,
+    "depth_m": 0.182,
+    "point_cam_xyz": [
+      0.031018686187632444,
+      -0.012300572270874876,
+      0.182
+    ],
+    "point_ee_xyz": [
+      -0.0023317327722907066,
+      0.0007594503695145249,
+      0.10139914602041245
+    ],
+    "point_base_xyz": [
+      0.4893542230129242,
+      0.07172823697328568,
+      0.12752534449100494
+    ],
+    "episode_name": "episode_0105",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0106": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0106/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 266,
+    "depth_m": 0.266,
+    "point_cam_xyz": [
+      0.04533500288961665,
+      -0.017977759472817125,
+      0.266
+    ],
+    "point_ee_xyz": [
+      -0.05015426129102707,
+      -0.011516026221215725,
+      0.1710806041955948
+    ],
+    "point_base_xyz": [
+      0.5593888163566589,
+      0.0731663927435875,
+      0.07567696273326874
+    ],
+    "episode_name": "episode_0106",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0107": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0107/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 189,
+    "depth_m": 0.189,
+    "point_cam_xyz": [
+      0.03221171257946446,
+      -0.012773671204370061,
+      0.189
+    ],
+    "point_ee_xyz": [
+      -0.006316943094134331,
+      -0.0002635059936437756,
+      0.10720593482255936
+    ],
+    "point_base_xyz": [
+      0.521732747554779,
+      0.07179617136716843,
+      0.13076449930667877
+    ],
+    "episode_name": "episode_0107",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0108": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0108/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.5134516954421997,
+      0.06904620677232742,
+      0.13032177090644836
+    ],
+    "episode_name": "episode_0108",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0109": {
+    "frame_index": 51,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0109/cam0_depth/000051.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.50218665599823,
+      0.06228596344590187,
+      0.1292133778333664
+    ],
+    "episode_name": "episode_0109",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0110": {
+    "frame_index": 51,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0110/cam0_depth/000051.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 269,
+    "depth_m": 0.269,
+    "point_cam_xyz": [
+      0.04584629991468751,
+      -0.01818051615860078,
+      0.269
+    ],
+    "point_ee_xyz": [
+      -0.0518622063100338,
+      -0.01195443607866764,
+      0.1735692322254181
+    ],
+    "point_base_xyz": [
+      0.5434727072715759,
+      0.056174617260694504,
+      0.07585220038890839
+    ],
+    "episode_name": "episode_0110",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0111": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0111/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.5019378066062927,
+      0.07012174278497696,
+      0.12835276126861572
+    ],
+    "episode_name": "episode_0111",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0112": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0112/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 265,
+    "depth_m": 0.265,
+    "point_cam_xyz": [
+      0.04516457054792636,
+      -0.01791017391088924,
+      0.265
+    ],
+    "point_ee_xyz": [
+      -0.04958494380116463,
+      -0.011369889602065086,
+      0.17025107145309448
+    ],
+    "point_base_xyz": [
+      0.5748407244682312,
+      0.07172634452581406,
+      0.07643458247184753
+    ],
+    "episode_name": "episode_0112",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0113": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0113/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 263,
+    "depth_m": 0.263,
+    "point_cam_xyz": [
+      0.04482370586454578,
+      -0.017775002787033475,
+      0.263
+    ],
+    "point_ee_xyz": [
+      -0.04844631254673004,
+      -0.01107761636376381,
+      0.16859197616577148
+    ],
+    "point_base_xyz": [
+      0.5586673021316528,
+      0.07381585240364075,
+      0.07548224180936813
+    ],
+    "episode_name": "episode_0113",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0114": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0114/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 195,
+    "depth_m": 0.195,
+    "point_cam_xyz": [
+      0.03323430662960619,
+      -0.013179184575937367,
+      0.195
+    ],
+    "point_ee_xyz": [
+      -0.009732837788760662,
+      -0.0011403257958590984,
+      0.11218318343162537
+    ],
+    "point_base_xyz": [
+      0.5280164480209351,
+      0.07498854398727417,
+      0.1314850151538849
+    ],
+    "episode_name": "episode_0114",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0115": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0115/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 193,
+    "depth_m": 0.193,
+    "point_cam_xyz": [
+      0.032893441946225614,
+      -0.012446349605479922,
+      0.193
+    ],
+    "point_ee_xyz": [
+      -0.008077932521700859,
+      -0.0008922078995965421,
+      0.11082194745540619
+    ],
+    "point_base_xyz": [
+      0.5187254548072815,
+      0.07833986729383469,
+      0.13004830479621887
+    ],
+    "episode_name": "episode_0115",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0116": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0116/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 270,
+    "depth_m": 0.27,
+    "point_cam_xyz": [
+      0.046016732256377806,
+      -0.018248101720528664,
+      0.27
+    ],
+    "point_ee_xyz": [
+      -0.05243152379989624,
+      -0.01210057269781828,
+      0.1743987649679184
+    ],
+    "point_base_xyz": [
+      0.5594683289527893,
+      0.07090446352958679,
+      0.07589112222194672
+    ],
+    "episode_name": "episode_0116",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0118": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0118/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 186,
+    "depth_m": 0.186,
+    "point_cam_xyz": [
+      0.031700415554393596,
+      -0.012570914518586412,
+      0.186
+    ],
+    "point_ee_xyz": [
+      -0.004608995746821165,
+      0.0001749038783600554,
+      0.10471730679273605
+    ],
+    "point_base_xyz": [
+      0.5184686183929443,
+      0.08327148854732513,
+      0.1308547705411911
+    ],
+    "episode_name": "episode_0118",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0119": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0119/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 195,
+    "depth_m": 0.195,
+    "point_cam_xyz": [
+      0.03323430662960619,
+      -0.013179184575937367,
+      0.195
+    ],
+    "point_ee_xyz": [
+      -0.009732837788760662,
+      -0.0011403257958590984,
+      0.11218318343162537
+    ],
+    "point_base_xyz": [
+      0.5185677409172058,
+      0.08404498547315598,
+      0.13093021512031555
+    ],
+    "episode_name": "episode_0119",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0120": {
+    "frame_index": 64,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0120/cam0_depth/000064.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 274,
+    "depth_m": 0.274,
+    "point_cam_xyz": [
+      0.04669846162313896,
+      -0.0185184439682402,
+      0.274
+    ],
+    "point_ee_xyz": [
+      -0.05470878630876541,
+      -0.012685119174420834,
+      0.1777169406414032
+    ],
+    "point_base_xyz": [
+      0.5902511477470398,
+      0.08528392761945724,
+      0.07739557325839996
+    ],
+    "episode_name": "episode_0120",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0121": {
+    "frame_index": 62,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0121/cam0_depth/000062.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5675614476203918,
+      0.06791020929813385,
+      0.07634593546390533
+    ],
+    "episode_name": "episode_0121",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0122": {
+    "frame_index": 66,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0122/cam0_depth/000066.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 196,
+    "depth_m": 0.196,
+    "point_cam_xyz": [
+      0.03340473897129648,
+      -0.012639816179658366,
+      0.196
+    ],
+    "point_ee_xyz": [
+      -0.009777854196727276,
+      -0.0013313040835782886,
+      0.11331520229578018
+    ],
+    "point_base_xyz": [
+      0.5226564407348633,
+      0.07608474045991898,
+      0.13170044124126434
+    ],
+    "episode_name": "episode_0122",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0123": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0123/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.5662516951560974,
+      0.08135128766298294,
+      0.07613386958837509
+    ],
+    "episode_name": "episode_0123",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0124": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0124/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 182,
+    "depth_m": 0.182,
+    "point_cam_xyz": [
+      0.031018686187632444,
+      -0.012300572270874876,
+      0.182
+    ],
+    "point_ee_xyz": [
+      -0.0023317327722907066,
+      0.0007594503695145249,
+      0.10139914602041245
+    ],
+    "point_base_xyz": [
+      0.5287774801254272,
+      0.0717896819114685,
+      0.1318056583404541
+    ],
+    "episode_name": "episode_0124",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0125": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0125/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5302894711494446,
+      0.07890725135803223,
+      0.13182200491428375
+    ],
+    "episode_name": "episode_0125",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0126": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0126/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 193,
+    "depth_m": 0.193,
+    "point_cam_xyz": [
+      0.032893441946225614,
+      -0.0130440134520816,
+      0.193
+    ],
+    "point_ee_xyz": [
+      -0.008594206534326077,
+      -0.0008480524993501604,
+      0.11052409559488297
+    ],
+    "point_base_xyz": [
+      0.5240108966827393,
+      0.08031420409679413,
+      0.13218578696250916
+    ],
+    "episode_name": "episode_0126",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0127": {
+    "frame_index": 62,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0127/cam0_depth/000062.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      112
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 194,
+    "depth_m": 0.194,
+    "point_cam_xyz": [
+      0.0330638742879159,
+      -0.011910077913069323,
+      0.194
+    ],
+    "point_ee_xyz": [
+      -0.008125623688101768,
+      -0.0010829574894160032,
+      0.11195242404937744
+    ],
+    "point_base_xyz": [
+      0.5124877095222473,
+      0.0819711908698082,
+      0.13251054286956787
+    ],
+    "episode_name": "episode_0127",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0128": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0128/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 196,
+    "depth_m": 0.196,
+    "point_cam_xyz": [
+      0.03340473897129648,
+      -0.01324677013786525,
+      0.196
+    ],
+    "point_ee_xyz": [
+      -0.010302153415977955,
+      -0.001286462415009737,
+      0.11301272362470627
+    ],
+    "point_base_xyz": [
+      0.5210168957710266,
+      0.0821055918931961,
+      0.13063710927963257
+    ],
+    "episode_name": "episode_0128",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0129": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0129/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 177,
+    "depth_m": 0.177,
+    "point_cam_xyz": [
+      0.030166524479181,
+      -0.011962644461235454,
+      0.177
+    ],
+    "point_ee_xyz": [
+      0.0005148462951183319,
+      0.0014901334652677178,
+      0.09725143760442734
+    ],
+    "point_base_xyz": [
+      0.4969482719898224,
+      0.07199812680482864,
+      0.12807981669902802
+    ],
+    "episode_name": "episode_0129",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0130": {
+    "frame_index": 65,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0130/cam0_depth/000065.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5715269446372986,
+      0.07851625233888626,
+      0.07652314752340317
+    ],
+    "episode_name": "episode_0130",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0131": {
+    "frame_index": 65,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0131/cam0_depth/000065.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5161489248275757,
+      0.07944397628307343,
+      0.12992757558822632
+    ],
+    "episode_name": "episode_0131",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0132": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0132/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.5030567646026611,
+      0.0704924538731575,
+      0.13025493919849396
+    ],
+    "episode_name": "episode_0132",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0133": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0133/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5129455327987671,
+      0.07584034651517868,
+      0.13005368411540985
+    ],
+    "episode_name": "episode_0133",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0134": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0134/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 179,
+    "depth_m": 0.179,
+    "point_cam_xyz": [
+      0.030507389162561578,
+      -0.012097815585091223,
+      0.179
+    ],
+    "point_ee_xyz": [
+      -0.0006237853085622191,
+      0.0011978602269664407,
+      0.09891051799058914
+    ],
+    "point_base_xyz": [
+      0.5014098882675171,
+      0.07310579717159271,
+      0.12967340648174286
+    ],
+    "episode_name": "episode_0134",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0135": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0135/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.5233052968978882,
+      0.06361020356416702,
+      0.13160240650177002
+    ],
+    "episode_name": "episode_0135",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0136": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0136/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 180,
+    "depth_m": 0.18,
+    "point_cam_xyz": [
+      0.030677821504251867,
+      -0.012165401147019106,
+      0.18
+    ],
+    "point_ee_xyz": [
+      -0.0011931010521948338,
+      0.001051723607815802,
+      0.09974006563425064
+    ],
+    "point_base_xyz": [
+      0.50091153383255,
+      0.05726184695959091,
+      0.12858112156391144
+    ],
+    "episode_name": "episode_0136",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0137": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0137/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 176,
+    "depth_m": 0.176,
+    "point_cam_xyz": [
+      0.029996092137490712,
+      -0.011895058899307571,
+      0.176
+    ],
+    "point_ee_xyz": [
+      0.0010841620387509465,
+      0.0016362700844183564,
+      0.09642189741134644
+    ],
+    "point_base_xyz": [
+      0.5221466422080994,
+      0.06472937017679214,
+      0.1315680742263794
+    ],
+    "episode_name": "episode_0137",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0138": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0138/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 181,
+    "depth_m": 0.181,
+    "point_cam_xyz": [
+      0.030848253845942156,
+      -0.012232986708946991,
+      0.181
+    ],
+    "point_ee_xyz": [
+      -0.0017624169122427702,
+      0.0009055869886651635,
+      0.10056960582733154
+    ],
+    "point_base_xyz": [
+      0.5223702788352966,
+      0.0680401548743248,
+      0.13145969808101654
+    ],
+    "episode_name": "episode_0138",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0139": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0139/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 178,
+    "depth_m": 0.178,
+    "point_cam_xyz": [
+      0.03033695682087129,
+      -0.012030230023163339,
+      0.178
+    ],
+    "point_ee_xyz": [
+      -5.446951763588004e-05,
+      0.0013439968461170793,
+      0.09808097779750824
+    ],
+    "point_base_xyz": [
+      0.5241253972053528,
+      0.07280319184064865,
+      0.13132117688655853
+    ],
+    "episode_name": "episode_0139",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0140": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0140/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 178,
+    "depth_m": 0.178,
+    "point_cam_xyz": [
+      0.03033695682087129,
+      -0.012030230023163339,
+      0.178
+    ],
+    "point_ee_xyz": [
+      -5.446951763588004e-05,
+      0.0013439968461170793,
+      0.09808097779750824
+    ],
+    "point_base_xyz": [
+      0.525083601474762,
+      0.07205657660961151,
+      0.13159909844398499
+    ],
+    "episode_name": "episode_0140",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0141": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0141/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 181,
+    "depth_m": 0.181,
+    "point_cam_xyz": [
+      0.030848253845942156,
+      -0.012232986708946991,
+      0.181
+    ],
+    "point_ee_xyz": [
+      -0.0017624169122427702,
+      0.0009055869886651635,
+      0.10056960582733154
+    ],
+    "point_base_xyz": [
+      0.5353631377220154,
+      0.07314015924930573,
+      0.13161110877990723
+    ],
+    "episode_name": "episode_0141",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0142": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0142/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 176,
+    "depth_m": 0.176,
+    "point_cam_xyz": [
+      0.029996092137490712,
+      -0.011895058899307571,
+      0.176
+    ],
+    "point_ee_xyz": [
+      0.0010841620387509465,
+      0.0016362700844183564,
+      0.09642189741134644
+    ],
+    "point_base_xyz": [
+      0.5219264626502991,
+      0.0756373181939125,
+      0.13078376650810242
+    ],
+    "episode_name": "episode_0142",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0143": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0143/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 181,
+    "depth_m": 0.181,
+    "point_cam_xyz": [
+      0.030848253845942156,
+      -0.012232986708946991,
+      0.181
+    ],
+    "point_ee_xyz": [
+      -0.0017624169122427702,
+      0.0009055869886651635,
+      0.10056960582733154
+    ],
+    "point_base_xyz": [
+      0.5269626975059509,
+      0.07751704007387161,
+      0.1308172047138214
+    ],
+    "episode_name": "episode_0143",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0144": {
+    "frame_index": 68,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0144/cam0_depth/000068.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 176,
+    "depth_m": 0.176,
+    "point_cam_xyz": [
+      0.029996092137490712,
+      -0.011895058899307571,
+      0.176
+    ],
+    "point_ee_xyz": [
+      0.0010841620387509465,
+      0.0016362700844183564,
+      0.09642189741134644
+    ],
+    "point_base_xyz": [
+      0.5116522908210754,
+      0.07454802095890045,
+      0.1300012469291687
+    ],
+    "episode_name": "episode_0144",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0145": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0145/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 174,
+    "depth_m": 0.174,
+    "point_cam_xyz": [
+      0.029655227454110138,
+      -0.011759887775451802,
+      0.174
+    ],
+    "point_ee_xyz": [
+      0.0022227936424314976,
+      0.0019285434391349554,
+      0.09476281702518463
+    ],
+    "point_base_xyz": [
+      0.5228234529495239,
+      0.0787263810634613,
+      0.13105295598506927
+    ],
+    "episode_name": "episode_0145",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0146": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0146/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.5149948596954346,
+      0.08703627437353134,
+      0.13064812123775482
+    ],
+    "episode_name": "episode_0146",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0147": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0147/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.5243788957595825,
+      0.08186394721269608,
+      0.13039450347423553
+    ],
+    "episode_name": "episode_0147",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0148": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0148/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 177,
+    "depth_m": 0.177,
+    "point_cam_xyz": [
+      0.030166524479181,
+      -0.011962644461235454,
+      0.177
+    ],
+    "point_ee_xyz": [
+      0.0005148462951183319,
+      0.0014901334652677178,
+      0.09725143760442734
+    ],
+    "point_base_xyz": [
+      0.5130385756492615,
+      0.07315811514854431,
+      0.12967577576637268
+    ],
+    "episode_name": "episode_0148",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0149": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0149/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 182,
+    "depth_m": 0.182,
+    "point_cam_xyz": [
+      0.031018686187632444,
+      -0.012300572270874876,
+      0.182
+    ],
+    "point_ee_xyz": [
+      -0.0023317327722907066,
+      0.0007594503695145249,
+      0.10139914602041245
+    ],
+    "point_base_xyz": [
+      0.5110475420951843,
+      0.07785244286060333,
+      0.12976796925067902
+    ],
+    "episode_name": "episode_0149",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0150": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0150/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.5030362606048584,
+      0.07337167114019394,
+      0.12957021594047546
+    ],
+    "episode_name": "episode_0150",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0151": {
+    "frame_index": 61,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0151/cam0_depth/000061.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.49899229407310486,
+      0.07913244515657425,
+      0.12928518652915955
+    ],
+    "episode_name": "episode_0151",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0152": {
+    "frame_index": 62,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0152/cam0_depth/000062.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 180,
+    "depth_m": 0.18,
+    "point_cam_xyz": [
+      0.030677821504251867,
+      -0.012165401147019106,
+      0.18
+    ],
+    "point_ee_xyz": [
+      -0.0011931010521948338,
+      0.001051723607815802,
+      0.09974006563425064
+    ],
+    "point_base_xyz": [
+      0.5104967355728149,
+      0.07778233289718628,
+      0.1301654428243637
+    ],
+    "episode_name": "episode_0152",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0153": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0153/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.5224456787109375,
+      0.07738712430000305,
+      0.1300724595785141
+    ],
+    "episode_name": "episode_0153",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0154": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0154/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 175,
+    "depth_m": 0.175,
+    "point_cam_xyz": [
+      0.029825659795800423,
+      -0.011827473337379686,
+      0.175
+    ],
+    "point_ee_xyz": [
+      0.001653477898798883,
+      0.0017824068199843168,
+      0.09559235721826553
+    ],
+    "point_base_xyz": [
+      0.5102605819702148,
+      0.07328767329454422,
+      0.12995825707912445
+    ],
+    "episode_name": "episode_0154",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0155": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0155/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.5226370096206665,
+      0.06390229612588882,
+      0.13125042617321014
+    ],
+    "episode_name": "episode_0155",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0156": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0156/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 179,
+    "depth_m": 0.179,
+    "point_cam_xyz": [
+      0.030507389162561578,
+      -0.012097815585091223,
+      0.179
+    ],
+    "point_ee_xyz": [
+      -0.0006237853085622191,
+      0.0011978602269664407,
+      0.09891051799058914
+    ],
+    "point_base_xyz": [
+      0.5153522491455078,
+      0.07412645220756531,
+      0.13040409982204437
+    ],
+    "episode_name": "episode_0156",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0157": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0157/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5198127031326294,
+      0.06929681450128555,
+      0.13042289018630981
+    ],
+    "episode_name": "episode_0157",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0158": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0158/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 175,
+    "depth_m": 0.175,
+    "point_cam_xyz": [
+      0.029825659795800423,
+      -0.011827473337379686,
+      0.175
+    ],
+    "point_ee_xyz": [
+      0.001653477898798883,
+      0.0017824068199843168,
+      0.09559235721826553
+    ],
+    "point_base_xyz": [
+      0.5116925835609436,
+      0.06790990382432938,
+      0.12990473210811615
+    ],
+    "episode_name": "episode_0158",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0159": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0159/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 183,
+    "depth_m": 0.183,
+    "point_cam_xyz": [
+      0.031189118529322733,
+      -0.012368157832802758,
+      0.183
+    ],
+    "point_ee_xyz": [
+      -0.0029010483995079994,
+      0.0006133137503638864,
+      0.10222868621349335
+    ],
+    "point_base_xyz": [
+      0.5086100101470947,
+      0.06515994668006897,
+      0.12932971119880676
+    ],
+    "episode_name": "episode_0159",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0160": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0160/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 186,
+    "depth_m": 0.186,
+    "point_cam_xyz": [
+      0.031700415554393596,
+      -0.012570914518586412,
+      0.186
+    ],
+    "point_ee_xyz": [
+      -0.004608995746821165,
+      0.0001749038783600554,
+      0.10471730679273605
+    ],
+    "point_base_xyz": [
+      0.503805935382843,
+      0.059325192123651505,
+      0.12929260730743408
+    ],
+    "episode_name": "episode_0160",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0161": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0161/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.4993937611579895,
+      0.06653817743062973,
+      0.1282428354024887
+    ],
+    "episode_name": "episode_0161",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0162": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0162/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 182,
+    "depth_m": 0.182,
+    "point_cam_xyz": [
+      0.031018686187632444,
+      -0.012300572270874876,
+      0.182
+    ],
+    "point_ee_xyz": [
+      -0.0023317327722907066,
+      0.0007594503695145249,
+      0.10139914602041245
+    ],
+    "point_base_xyz": [
+      0.4912298619747162,
+      0.06512615829706192,
+      0.1276114583015442
+    ],
+    "episode_name": "episode_0162",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0163": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0163/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.49178192019462585,
+      0.06727535277605057,
+      0.1266080141067505
+    ],
+    "episode_name": "episode_0163",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0164": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0164/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 264,
+    "depth_m": 0.264,
+    "point_cam_xyz": [
+      0.04499413820623607,
+      -0.01784258834896136,
+      0.264
+    ],
+    "point_ee_xyz": [
+      -0.049015626311302185,
+      -0.011223752982914448,
+      0.16942152380943298
+    ],
+    "point_base_xyz": [
+      0.5626081824302673,
+      0.06725837290287018,
+      0.0750456228852272
+    ],
+    "episode_name": "episode_0164",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0165": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0165/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 188,
+    "depth_m": 0.188,
+    "point_cam_xyz": [
+      0.032041280237774174,
+      -0.012706085642442178,
+      0.188
+    ],
+    "point_ee_xyz": [
+      -0.005747627466917038,
+      -0.00011736936721717939,
+      0.10637639462947845
+    ],
+    "point_base_xyz": [
+      0.5139068961143494,
+      0.05871961638331413,
+      0.12911653518676758
+    ],
+    "episode_name": "episode_0165",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0166": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0166/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 180,
+    "depth_m": 0.18,
+    "point_cam_xyz": [
+      0.030677821504251867,
+      -0.012165401147019106,
+      0.18
+    ],
+    "point_ee_xyz": [
+      -0.0011931010521948338,
+      0.001051723607815802,
+      0.09974006563425064
+    ],
+    "point_base_xyz": [
+      0.5042548179626465,
+      0.06532768905162811,
+      0.12832699716091156
+    ],
+    "episode_name": "episode_0166",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0167": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0167/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 189,
+    "depth_m": 0.189,
+    "point_cam_xyz": [
+      0.03221171257946446,
+      -0.012773671204370061,
+      0.189
+    ],
+    "point_ee_xyz": [
+      -0.006316943094134331,
+      -0.0002635059936437756,
+      0.10720593482255936
+    ],
+    "point_base_xyz": [
+      0.5074549913406372,
+      0.06113081052899361,
+      0.12905500829219818
+    ],
+    "episode_name": "episode_0167",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0168": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0168/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 191,
+    "depth_m": 0.191,
+    "point_cam_xyz": [
+      0.03255257726284504,
+      -0.01290884232822583,
+      0.191
+    ],
+    "point_ee_xyz": [
+      -0.007455574814230204,
+      -0.0005557792610488832,
+      0.10886501520872116
+    ],
+    "point_base_xyz": [
+      0.5051658153533936,
+      0.0600326769053936,
+      0.1292072981595993
+    ],
+    "episode_name": "episode_0168",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0169": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0169/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 183,
+    "depth_m": 0.183,
+    "point_cam_xyz": [
+      0.031189118529322733,
+      -0.012368157832802758,
+      0.183
+    ],
+    "point_ee_xyz": [
+      -0.0029010483995079994,
+      0.0006133137503638864,
+      0.10222868621349335
+    ],
+    "point_base_xyz": [
+      0.5067650675773621,
+      0.0596238374710083,
+      0.12964850664138794
+    ],
+    "episode_name": "episode_0169",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0170": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0170/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 186,
+    "depth_m": 0.186,
+    "point_cam_xyz": [
+      0.031700415554393596,
+      -0.012570914518586412,
+      0.186
+    ],
+    "point_ee_xyz": [
+      -0.004608995746821165,
+      0.0001749038783600554,
+      0.10471730679273605
+    ],
+    "point_base_xyz": [
+      0.49691519141197205,
+      0.06785127520561218,
+      0.12858645617961884
+    ],
+    "episode_name": "episode_0170",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0171": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0171/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 187,
+    "depth_m": 0.187,
+    "point_cam_xyz": [
+      0.03187084789608388,
+      -0.012638500080514295,
+      0.187
+    ],
+    "point_ee_xyz": [
+      -0.005178311839699745,
+      2.8767259209416807e-05,
+      0.10554685443639755
+    ],
+    "point_base_xyz": [
+      0.5081657767295837,
+      0.05628271400928497,
+      0.12863710522651672
+    ],
+    "episode_name": "episode_0171",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0172": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0172/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 189,
+    "depth_m": 0.189,
+    "point_cam_xyz": [
+      0.03221171257946446,
+      -0.012773671204370061,
+      0.189
+    ],
+    "point_ee_xyz": [
+      -0.006316943094134331,
+      -0.0002635059936437756,
+      0.10720593482255936
+    ],
+    "point_base_xyz": [
+      0.526227593421936,
+      0.07121139019727707,
+      0.12986436486244202
+    ],
+    "episode_name": "episode_0172",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0173": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0173/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 188,
+    "depth_m": 0.188,
+    "point_cam_xyz": [
+      0.032041280237774174,
+      -0.012123905315182515,
+      0.188
+    ],
+    "point_ee_xyz": [
+      -0.005244728177785873,
+      -0.0001603808195795864,
+      0.10666652023792267
+    ],
+    "point_base_xyz": [
+      0.5142412185668945,
+      0.05950406938791275,
+      0.129533588886261
+    ],
+    "episode_name": "episode_0173",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0174": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0174/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.5063006281852722,
+      0.06523209065198898,
+      0.12873853743076324
+    ],
+    "episode_name": "episode_0174",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0175": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0175/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      159,
+      110
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.030511737347607124,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.0039649344980716705,
+      0.0013363230973482132,
+      0.1039087250828743
+    ],
+    "point_base_xyz": [
+      0.5098202228546143,
+      0.06650639325380325,
+      0.13195902109146118
+    ],
+    "episode_name": "episode_0175",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0176": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0176/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 275,
+    "depth_m": 0.275,
+    "point_cam_xyz": [
+      0.04686889396482925,
+      -0.018586029530168083,
+      0.275
+    ],
+    "point_ee_xyz": [
+      -0.055278100073337555,
+      -0.012831255793571472,
+      0.1785464733839035
+    ],
+    "point_base_xyz": [
+      0.5512407422065735,
+      0.08524355292320251,
+      0.07394186407327652
+    ],
+    "episode_name": "episode_0176",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0177": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0177/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      161,
+      110
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 263,
+    "depth_m": 0.263,
+    "point_cam_xyz": [
+      0.04627126620249333,
+      -0.017775002787033475,
+      0.263
+    ],
+    "point_ee_xyz": [
+      -0.04855257272720337,
+      -0.01252096425741911,
+      0.16856218874454498
+    ],
+    "point_base_xyz": [
+      0.5481361746788025,
+      0.08252450078725815,
+      0.07343633472919464
+    ],
+    "episode_name": "episode_0177",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0178": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0178/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 193,
+    "depth_m": 0.193,
+    "point_cam_xyz": [
+      0.032893441946225614,
+      -0.0130440134520816,
+      0.193
+    ],
+    "point_ee_xyz": [
+      -0.008594206534326077,
+      -0.0008480524993501604,
+      0.11052409559488297
+    ],
+    "point_base_xyz": [
+      0.5012256503105164,
+      0.06164043769240379,
+      0.12360820919275284
+    ],
+    "episode_name": "episode_0178",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0179": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0179/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 267,
+    "depth_m": 0.267,
+    "point_cam_xyz": [
+      0.045505435231306936,
+      -0.01804534503474501,
+      0.267
+    ],
+    "point_ee_xyz": [
+      -0.05072357505559921,
+      -0.011662162840366364,
+      0.1719101518392563
+    ],
+    "point_base_xyz": [
+      0.561498761177063,
+      0.07027682662010193,
+      0.07519270479679108
+    ],
+    "episode_name": "episode_0179",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0180": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0180/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 273,
+    "depth_m": 0.273,
+    "point_cam_xyz": [
+      0.046528029281448675,
+      -0.018450858406312314,
+      0.273
+    ],
+    "point_ee_xyz": [
+      -0.05413946881890297,
+      -0.012538982555270195,
+      0.1768873929977417
+    ],
+    "point_base_xyz": [
+      0.5562082529067993,
+      0.057512473315000534,
+      0.07544868439435959
+    ],
+    "episode_name": "episode_0180",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0181": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0181/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 196,
+    "depth_m": 0.196,
+    "point_cam_xyz": [
+      0.03340473897129648,
+      -0.01324677013786525,
+      0.196
+    ],
+    "point_ee_xyz": [
+      -0.010302153415977955,
+      -0.001286462415009737,
+      0.11301272362470627
+    ],
+    "point_base_xyz": [
+      0.5035344362258911,
+      0.07716981321573257,
+      0.12774759531021118
+    ],
+    "episode_name": "episode_0181",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0182": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0182/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 190,
+    "depth_m": 0.19,
+    "point_cam_xyz": [
+      0.03238214492115475,
+      -0.012841256766297948,
+      0.19
+    ],
+    "point_ee_xyz": [
+      -0.006886259187012911,
+      -0.00040964261279441416,
+      0.10803547501564026
+    ],
+    "point_base_xyz": [
+      0.5131849646568298,
+      0.07104773074388504,
+      0.13021425902843475
+    ],
+    "episode_name": "episode_0182",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0183": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0183/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5662775635719299,
+      0.06902982294559479,
+      0.07545781880617142
+    ],
+    "episode_name": "episode_0183",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0184": {
+    "frame_index": 54,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0184/cam0_depth/000054.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 274,
+    "depth_m": 0.274,
+    "point_cam_xyz": [
+      0.04669846162313896,
+      -0.0185184439682402,
+      0.274
+    ],
+    "point_ee_xyz": [
+      -0.05470878630876541,
+      -0.012685119174420834,
+      0.1777169406414032
+    ],
+    "point_base_xyz": [
+      0.5560088157653809,
+      0.06804905086755753,
+      0.0756976455450058
+    ],
+    "episode_name": "episode_0184",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0185": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0185/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 268,
+    "depth_m": 0.268,
+    "point_cam_xyz": [
+      0.04567586757299723,
+      -0.018112930596672894,
+      0.268
+    ],
+    "point_ee_xyz": [
+      -0.051292892545461655,
+      -0.011808299459517002,
+      0.1727396845817566
+    ],
+    "point_base_xyz": [
+      0.5555173754692078,
+      0.06915544718503952,
+      0.07474803924560547
+    ],
+    "episode_name": "episode_0185",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0186": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0186/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 184,
+    "depth_m": 0.184,
+    "point_cam_xyz": [
+      0.03135955087101302,
+      -0.012435743394730643,
+      0.184
+    ],
+    "point_ee_xyz": [
+      -0.003470364259555936,
+      0.0004671771312132478,
+      0.10305822640657425
+    ],
+    "point_base_xyz": [
+      0.4944910407066345,
+      0.07179708778858185,
+      0.12723058462142944
+    ],
+    "episode_name": "episode_0186",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0187": {
+    "frame_index": 60,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0187/cam0_depth/000060.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 198,
+    "depth_m": 0.198,
+    "point_cam_xyz": [
+      0.033745603654677055,
+      -0.012768793895777328,
+      0.198
+    ],
+    "point_ee_xyz": [
+      -0.01091113593429327,
+      -0.0016240349505096674,
+      0.11497736722230911
+    ],
+    "point_base_xyz": [
+      0.4967917203903198,
+      0.08065696805715561,
+      0.12537012994289398
+    ],
+    "episode_name": "episode_0187",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0188": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0188/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 205,
+    "depth_m": 0.205,
+    "point_cam_xyz": [
+      0.034938630046509066,
+      -0.013855040195216205,
+      0.205
+    ],
+    "point_ee_xyz": [
+      -0.01542599592357874,
+      -0.0026016919873654842,
+      0.12047859281301498
+    ],
+    "point_base_xyz": [
+      0.5023968815803528,
+      0.06948409974575043,
+      0.12160379439592361
+    ],
+    "episode_name": "episode_0188",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0189": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0189/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.5012494921684265,
+      0.07633158564567566,
+      0.1287207156419754
+    ],
+    "episode_name": "episode_0189",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0190": {
+    "frame_index": 59,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0190/cam0_depth/000059.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 185,
+    "depth_m": 0.185,
+    "point_cam_xyz": [
+      0.031529983212703304,
+      -0.012503328956658526,
+      0.185
+    ],
+    "point_ee_xyz": [
+      -0.004039680119603872,
+      0.0003210405120626092,
+      0.10388776659965515
+    ],
+    "point_base_xyz": [
+      0.4943741261959076,
+      0.07372919470071793,
+      0.12757083773612976
+    ],
+    "episode_name": "episode_0190",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0191": {
+    "frame_index": 57,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0191/cam0_depth/000057.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 180,
+    "depth_m": 0.18,
+    "point_cam_xyz": [
+      0.030677821504251867,
+      -0.012165401147019106,
+      0.18
+    ],
+    "point_ee_xyz": [
+      -0.0011931010521948338,
+      0.001051723607815802,
+      0.09974006563425064
+    ],
+    "point_base_xyz": [
+      0.4818596839904785,
+      0.06628182530403137,
+      0.12577636539936066
+    ],
+    "episode_name": "episode_0191",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0192": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0192/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 189,
+    "depth_m": 0.189,
+    "point_cam_xyz": [
+      0.03221171257946446,
+      -0.012773671204370061,
+      0.189
+    ],
+    "point_ee_xyz": [
+      -0.006316943094134331,
+      -0.0002635059936437756,
+      0.10720593482255936
+    ],
+    "point_base_xyz": [
+      0.5120327472686768,
+      0.07248745113611221,
+      0.12951044738292694
+    ],
+    "episode_name": "episode_0192",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0193": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0193/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      111
+    ],
+    "used_fallback_depth_mm": true,
+    "depth_mm": 196,
+    "depth_m": 0.196,
+    "point_cam_xyz": [
+      0.03340473897129648,
+      -0.012639816179658366,
+      0.196
+    ],
+    "point_ee_xyz": [
+      -0.009777854196727276,
+      -0.0013313040835782886,
+      0.11331520229578018
+    ],
+    "point_base_xyz": [
+      0.4979485273361206,
+      0.07661104947328568,
+      0.12867222726345062
+    ],
+    "episode_name": "episode_0193",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0194": {
+    "frame_index": 53,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0194/cam0_depth/000053.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 266,
+    "depth_m": 0.266,
+    "point_cam_xyz": [
+      0.04533500288961665,
+      -0.017977759472817125,
+      0.266
+    ],
+    "point_ee_xyz": [
+      -0.05015426129102707,
+      -0.011516026221215725,
+      0.1710806041955948
+    ],
+    "point_base_xyz": [
+      0.5432011485099792,
+      0.07198573648929596,
+      0.07421305775642395
+    ],
+    "episode_name": "episode_0194",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0195": {
+    "frame_index": 52,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0195/cam0_depth/000052.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5006219148635864,
+      0.05986269563436508,
+      0.12835843861103058
+    ],
+    "episode_name": "episode_0195",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0196": {
+    "frame_index": 56,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0196/cam0_depth/000056.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 280,
+    "depth_m": 0.28,
+    "point_cam_xyz": [
+      0.047721055673280686,
+      -0.0189239573398075,
+      0.28
+    ],
+    "point_ee_xyz": [
+      -0.05812468007206917,
+      -0.013561938889324665,
+      0.1826941817998886
+    ],
+    "point_base_xyz": [
+      0.559248685836792,
+      0.07146415114402771,
+      0.07561731338500977
+    ],
+    "episode_name": "episode_0196",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0197": {
+    "frame_index": 55,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0197/cam0_depth/000055.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 259,
+    "depth_m": 0.259,
+    "point_cam_xyz": [
+      0.044141976497784625,
+      -0.01750466053932194,
+      0.259
+    ],
+    "point_ee_xyz": [
+      -0.04616905003786087,
+      -0.010493069887161255,
+      0.16527381539344788
+    ],
+    "point_base_xyz": [
+      0.5338330268859863,
+      0.06778886169195175,
+      0.07399778813123703
+    ],
+    "episode_name": "episode_0197",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0198": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0198/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 286,
+    "depth_m": 0.286,
+    "point_cam_xyz": [
+      0.048743649723422405,
+      -0.019329470711374804,
+      0.286
+    ],
+    "point_ee_xyz": [
+      -0.061540573835372925,
+      -0.014438758604228497,
+      0.18767142295837402
+    ],
+    "point_base_xyz": [
+      0.570033073425293,
+      0.0723196268081665,
+      0.07625497132539749
+    ],
+    "episode_name": "episode_0198",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0199": {
+    "frame_index": 58,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0199/cam0_depth/000058.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.4979884922504425,
+      0.05737494304776192,
+      0.12768927216529846
+    ],
+    "episode_name": "episode_0199",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  },
+  "episode_0200": {
+    "frame_index": 63,
+    "depth_file": "/home/labiiwa/dit_demos/place_drawer/episodes/episode_0200/cam0_depth/000063.png",
+    "requested_pixel_uv": [
+      160,
+      110
+    ],
+    "used_pixel_uv": [
+      160,
+      110
+    ],
+    "used_fallback_depth_mm": false,
+    "depth_mm": 192,
+    "depth_m": 0.192,
+    "point_cam_xyz": [
+      0.03272300960453532,
+      -0.012976427890153713,
+      0.192
+    ],
+    "point_ee_xyz": [
+      -0.008024890907108784,
+      -0.0007019158801995218,
+      0.10969455540180206
+    ],
+    "point_base_xyz": [
+      0.5128280520439148,
+      0.06845541298389435,
+      0.1293005496263504
+    ],
+    "episode_name": "episode_0200",
+    "physical_open_ratio": 0.25,
+    "physical_open_min_delta": 0.0001,
+    "physical_open_stable_frames": 1
+  }
+}

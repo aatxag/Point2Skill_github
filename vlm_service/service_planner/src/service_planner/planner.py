@@ -41,7 +41,7 @@ import image2numpy
 _DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 _MODEL_ID = "/home/labiiwa/ros2_ws/models/Qwen2.5-VL-3B-Instruct"
-print(f"[Planner] Loading Qwen from: {_MODEL_ID}")
+print(f"[Planner] Loading Qwen from directory: {_MODEL_ID}")
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     _MODEL_ID,
     torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
@@ -50,7 +50,7 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     use_safetensors=True,
 )
 processor = AutoProcessor.from_pretrained(_MODEL_ID, local_files_only=True)
-print("[Planner] Qwen ready.")
+print("[Planner] Qwen is ready to work.")
 
 # ─── SAM model (loaded once at import time) ───────────────────────────────────
 
@@ -59,7 +59,7 @@ print(f"[Planner] Loading SAM from: {_SAM_CHECKPOINT}")
 _sam = sam_model_registry["vit_b"](checkpoint=_SAM_CHECKPOINT)
 _sam.to(_DEVICE)
 mask_generator = SamAutomaticMaskGenerator(_sam)
-print("[Planner] SAM ready.")
+print("[Planner] SAM is ready to work.")
 
 # ─── Policy registry ─────────────────────────────────────────────────────────
 
@@ -258,18 +258,19 @@ class PlannerNode(Node):
     def _generate_plan(self, command: str, img_pil) -> tuple[list | None, str]:
         """Returns (plan_list, raw_json_str). raw_json_str is always set."""
         prompt = (
-            "You are a robotic arm controller. "
-            "Look at the image to understand the current scene.\n\n"
             "Generate a step-by-step plan to execute the following command.\n\n"
             "Allowed actions:\n"
+            "  open  — open a drawer\n\n"
             "  pick  — pick up an object with the gripper\n"
             "  place — place the held object at a target location\n"
-            "  open  — open a drawer\n\n"
+            "Ordering rules (MUST follow):\n"
+            "  - If the target is a drawer, ALWAYS open it FIRST, then pick, then place.\n"
+            "  - Never pick before opening the container that will receive the object.\n\n"
             "Output format — JSON array only, no explanation:\n"
             '[\n'
-            '  {"step": 1, "action": "pick",  "object": "<object_name>", "target": null},\n'
-             '  {"step": 1, "action": "open",  "target": null},\n'
-            '  {"step": 2, "action": "place", "object": "<object_name>", "target": "<location>"}\n'
+            '  {"step": 1, "action": "open",  "target": "<container>"},\n'
+            '  {"step": 2, "action": "pick",  "object": "<object_name>", "target": null},\n'
+            '  {"step": 3, "action": "place", "object": "<object_name>", "target": "<location>"}\n'
             ']\n\n'
             f"Command: {command}"
         )
@@ -514,13 +515,12 @@ class PlannerNode(Node):
 
     def _map_steps(self, plan: list, img_pil) -> list:
         mapped = []
-        for step in plan:
+        for i, step in enumerate(plan, 1):
             action = str(step.get("action", "pick")).strip()
             obj    = str(step.get("object", "") or "").strip()
             target = str(step.get("target") or "").strip()
-            n      = int(step.get("step", len(mapped) + 1))
             policy = self._map_to_policy(action, obj, target, img_pil)
-            mapped.append({"step": n, "action": action, "object": obj,
+            mapped.append({"step": i, "action": action, "object": obj,
                            "target": target, "policy": policy})
         return mapped
 
@@ -631,7 +631,7 @@ class PlannerNode(Node):
             img_pil = ImagePIL.fromarray(self.image_rgb, mode="RGB")
 
         # ── 1. Generate raw plan ──────────────────────────────────────────────
-        self._pub_response("Generating plan…")
+        self._pub_response("VLM is generating plan…")
         plan, raw_json = self._generate_plan(self.last_prompt, img_pil)
 
         if plan is None:

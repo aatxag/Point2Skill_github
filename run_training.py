@@ -19,7 +19,7 @@ COMMON = [
     "batch_size=128",
     "num_workers=2",
     "train_transform=preproc",
-    "max_iterations=10000",
+    "max_iterations=8000",
     "eval_freq=500",
     "save_freq=500",
     "devices=1",
@@ -27,8 +27,8 @@ COMMON = [
     "wandb.project=dit-policy",
 ]
 
-_BUF_CLOSE = f"{DIT_DIR}/data_robobuf/close/buf.pkl"
-_BUF_PICK  = f"{DIT_DIR}/data_robobuf/pick_coffee/buf.pkl"
+_BUF_GEN1 = f"{DIT_DIR}/data_robobuf/place_drawer/buf.pkl"
+_BUF_GEN2  = f"{DIT_DIR}/data_robobuf/generalization_fourposes/buf.pkl"
 
 _EXTRA_CONTACT = [
     "agent=diffusion_contact",
@@ -45,18 +45,11 @@ _EXTRA_DIT = [
 ]
 
 RUNS = [
-    # ── diffusion_contact ─────────────────────────────────────────────────────
-       {
-        "script":      "finetune_contact.py",
-        "exp_name":    "pick_coffee",
-        "buffer_path": _BUF_PICK,
-        "extra":       _EXTRA_CONTACT + ["img_chunk=1"],
-    },
 
     {
         "script":      "finetune_contact.py",
-        "exp_name":    "close",
-        "buffer_path": _BUF_CLOSE,
+        "exp_name":    "place_drawer_contact",
+        "buffer_path": _BUF_GEN1,
         "extra":       _EXTRA_CONTACT + ["img_chunk=1"],
     },
 
