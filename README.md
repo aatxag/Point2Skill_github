@@ -41,7 +41,7 @@ Point2Skill executes goal-conditioned manipulation primitives such as
 objects and spatial configurations and composed to solve complex long-horizon tasks.
 
 <p align="center">
-  <b>Click a 3D point → Select a skill → Execute → Compose</b>
+  <b>Click a 3D point → Select a skill → Execute
 </p>
 
 ---
@@ -54,19 +54,6 @@ objects and spatial configurations and composed to solve complex long-horizon ta
 - 🖱️ **Human-interactive interface:** command the robot by clicking a target in the scene.
 - 🤖 **VLM-driven execution:** a vision-language model can select both the primitive and its target.
 - 🌍 **Generalization:** point-based conditioning enables transfer across object categories and spatial configurations.
-
-## Results at a Glance
-
-| Evaluation | Success Rate |
-|---|---:|
-| Goal-conditioning ablation | **90.0%** |
-| Pick | **93.3%** |
-| Place | **95.8%** |
-| Open | **95.0%** |
-| Close | **85.0%** |
-| Insert | **90.0%** |
-| Zero-shot unseen object generalization | **97.0%** |
-| Held-out position generalization | **92.0%** |
 
 ## Method Overview
 
@@ -118,7 +105,7 @@ conda activate point2skill
 ## Training
 
 ```bash
-python run_training.py
+python3 run_training.py
 ```
 
 ## Citation
