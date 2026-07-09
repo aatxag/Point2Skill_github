@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/point2skill_teaser.gif" width="100%" alt="Point2Skill overview">
+  <img src="assets/github_cover.png" width="100%" alt="Point2Skill overview">
 </p>
 
 **Point2Skill** is a framework for interactive robot manipulation that turns
