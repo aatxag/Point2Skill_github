@@ -111,23 +111,30 @@ cd Point2Skill_github
 conda create -n point2skill python=3.9
 conda activate point2skill
 
+# Add your installation command here
+# pip install -r requirements.txt
+```
+
 ## Training
 
+```bash
 python run_training.py
+```
 
 ## Citation
+
+```bibtex
 @inproceedings{point2skill2026,
   title     = {Point2Skill: Interactive 3D Goal-Conditioned Diffusion Primitives for Robot Control},
   author    = {Anonymous Author(s)},
   booktitle = {Conference on Robot Learning},
   year      = {2026}
 }
+```
 
 ## License
 
 This project is released under the MIT License.
-# Add your installation command here
-# pip install -r requirements.txt
 
 
 
