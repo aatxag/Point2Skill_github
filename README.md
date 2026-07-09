@@ -23,9 +23,7 @@
   <b>📄 Paper coming soon</b>
 </p>
 
-<p align="center">
-  <img src="assets/github_cover.png" width="100%" alt="Point2Skill overview">
-</p>
+
 
 **Point2Skill** is a framework for interactive robot manipulation that turns
 **3D target points into steerable and reusable diffusion-based manipulation skills**.
@@ -74,7 +72,7 @@ Point2Skill bridges high-level task intent and low-level robot control through
 4. **Compose behaviors.** Multiple primitives are sequenced to solve long-horizon manipulation tasks.
 
 <p align="center">
-  <img src="assets/architecture.png" width="90%" alt="Point2Skill architecture">
+  <img src="assets/github_cover.png" width="100%" alt="Point2Skill overview">
 </p>
 
 ## Primitive Skills
