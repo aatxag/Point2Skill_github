@@ -5,12 +5,15 @@ replay_buffer_contact.py
 - Defines dataset of pytorch from robobuf data to train the policy.
 
    buf.pkl
-   ↓
+
+  ↓
 
 Carga trayectorias de robot
+   
    ↓
 
 Separa train / test
+   
    ↓
 
 Para cada transición extrae:
@@ -19,6 +22,7 @@ Para cada transición extrae:
    - acciones futuras
    - máscara de acciones válidas
    - contact anchor opcional
+   
    ↓
 
 Devuelve tensores de PyTorch
