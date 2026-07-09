@@ -129,6 +129,7 @@ If you find Point2Skill useful for your research, please cite our work:
 
 Point2Skill builds upon the DiT-Block Policy codebase. Please also consider citing:
 
+```bibtex
 @article{dasari2024ditpi,
   title   = {The Ingredients for Robotic Diffusion Transformers},
   author  = {Sudeep Dasari and Oier Mees and Sebastian Zhao and Mohan Kumar Srirama and Sergey Levine},
