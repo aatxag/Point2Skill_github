@@ -4,6 +4,7 @@
   <a href="https://point2skill.github.io/Point2Skill-web/">
     <img src="https://img.shields.io/badge/Project-Page-brightgreen" alt="Project Page">
   </a>
+
   <!-- Add these badges when the corresponding links are public -->
   <!--
   <a href="PAPER_URL">
@@ -13,6 +14,7 @@
     <img src="https://img.shields.io/badge/Video-Demo-red" alt="Video">
   </a>
   -->
+
   <img src="https://img.shields.io/badge/Python-3.9-blue" alt="Python 3.9">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License">
 </p>
@@ -23,7 +25,12 @@
   <b>📄 Paper coming soon</b>
 </p>
 
-
+<p align="center">
+  <img src="assets/videos/place_donut.gif" width="24%">
+  <img src="assets/videos/breakfast.gif" width="24%">
+  <img src="assets/videos/insert_egg.gif" width="24%">
+  <img src="assets/videos/put_coffee_drawer.gif" width="24%">
+</p>
 
 **Point2Skill** is a framework for interactive robot manipulation that turns
 **3D target points into steerable and reusable diffusion-based manipulation skills**.
