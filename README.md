@@ -27,7 +27,7 @@
 
 <p align="center">
   <img src="assets/videos/place_donut.gif" width="24%">
-  <img src="assets/videos/breakfast.gif" width="24%">
+  <img src="assets/videos/breakdast.gif" width="24%">
   <img src="assets/videos/insert_egg.gif" width="24%">
   <img src="assets/videos/put_coffee_drawer.gif" width="24%">
 </p>
