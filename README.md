@@ -107,8 +107,16 @@ conda activate point2skill
 ```bash
 python3 run_training.py
 ```
+## Acknowledgements
+
+This repository is built upon and adapted from the
+[DiT-Block Policy](https://github.com/SudeepDasari/dit-policy) codebase from
+*The Ingredients for Robotic Diffusion Transformers*.
+
+We thank the authors for open-sourcing their implementation.
 
 ## Citation
+If you find Point2Skill useful for your research, please cite our work:
 
 ```bibtex
 @inproceedings{point2skill2026,
@@ -118,6 +126,15 @@ python3 run_training.py
   year      = {2026}
 }
 ```
+
+Point2Skill builds upon the DiT-Block Policy codebase. Please also consider citing:
+
+@article{dasari2024ditpi,
+  title   = {The Ingredients for Robotic Diffusion Transformers},
+  author  = {Sudeep Dasari and Oier Mees and Sebastian Zhao and Mohan Kumar Srirama and Sergey Levine},
+  journal = {arXiv preprint arXiv:2410.10088},
+  year    = {2024}
+}
 
 ## License
 
