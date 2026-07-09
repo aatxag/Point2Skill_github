@@ -21,8 +21,6 @@
   <a href="https://point2skill.github.io/Point2Skill-web/"><b>🌐 Project Page</b></a>
   &nbsp;·&nbsp;
   <b>📄 Paper coming soon</b>
-  &nbsp;·&nbsp;
-  <b>🎥 Videos coming soon</b>
 </p>
 
 <p align="center">
