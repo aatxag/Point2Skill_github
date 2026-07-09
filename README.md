@@ -41,7 +41,7 @@ Point2Skill executes goal-conditioned manipulation primitives such as
 objects and spatial configurations and composed to solve complex long-horizon tasks.
 
 <p align="center">
-  <b>Click a 3D point → Select a skill → Execute
+  <b>Click a 3D point → Select a skill → Execute<b>
 </p>
 
 ---
@@ -110,12 +110,13 @@ python3 run_training.py
 ## Acknowledgements
 
 This repository is built upon and adapted from the
-[DiT-Block Policy](https://github.com/SudeepDasari/dit-policy) codebase from
+[DiT-Block Policy](https://github.com/SudeepDasari/dit-policy) codebase introduced in
 *The Ingredients for Robotic Diffusion Transformers*.
 
 We thank the authors for open-sourcing their implementation.
 
 ## Citation
+
 If you find Point2Skill useful for your research, please cite our work:
 
 ```bibtex
@@ -127,7 +128,7 @@ If you find Point2Skill useful for your research, please cite our work:
 }
 ```
 
-Point2Skill builds upon the DiT-Block Policy codebase. Please also consider citing:
+Point2Skill builds upon the DiT-Block Policy codebase. If you use this codebase, please also cite:
 
 ```bibtex
 @article{dasari2024ditpi,
@@ -136,10 +137,9 @@ Point2Skill builds upon the DiT-Block Policy codebase. Please also consider citi
   journal = {arXiv preprint arXiv:2410.10088},
   year    = {2024}
 }
+```
 
 ## License
 
 This project is released under the MIT License.
-
-
 
