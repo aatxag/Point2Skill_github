@@ -1,9 +1,8 @@
 # Copyright (c) Sudeep Dasari, 2023
-
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-
-
+# Modified by Alaitz Atxa, 2026
+#
+# Licensed under the MIT License.
+# See the LICENSE file in the root directory of this repository.
 import os
 import traceback
 
