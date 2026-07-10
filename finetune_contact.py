@@ -21,7 +21,7 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 
 
 @hydra.main(
-    config_path=os.path.join(base_path, "experiments"), config_name="finetune.yaml"
+    config_path=os.path.join(base_path, "experiments"), config_name="finetune_contact"
 )
 def bc_finetune(cfg: DictConfig):
     try:
@@ -91,10 +91,13 @@ def bc_finetune(cfg: DictConfig):
 
             # handle the image transform on GPU if specified
             if gpu_transform is not None:
-                (imgs, obs), actions, mask = batch
+                (imgs, obs), actions, mask = batch[0][0], batch[1], batch[2]
                 imgs = {k: v.to(trainer.device_id) for k, v in imgs.items()}
                 imgs = {k: gpu_transform(v) for k, v in imgs.items()}
-                batch = ((imgs, obs), actions, mask)
+                if len(batch) == 4:
+                    batch = ((imgs, obs), actions, mask, batch[3])
+                else:
+                    batch = ((imgs, obs), actions, mask)
 
             trainer.optim.zero_grad()
             loss = trainer.training_step(batch, misc.GLOBAL_STEP)
