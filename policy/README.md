@@ -1,4 +1,4 @@
-
+```text
 ├── policy/
 │   ├── finetune.py              # Versión original (sin obs_config.yaml ni wandb.log).
 │   ├── setup.py, env.yml        # Paquete data4robotics + entorno conda.
@@ -50,3 +50,4 @@
 │   └── install/                       # ⚠ artefactos de colcon build commiteados.
 │       └── .../site-packages/data4robotics/   # aquí SÍ están task.py y replay_buffer.py
 │                                              # que faltan en el source tree
+```
