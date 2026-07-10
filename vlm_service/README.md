@@ -23,7 +23,7 @@ ros2 launch service_primitives primitives.launch.py
 " Put the coffee inside the drawer "
 
 Bere plana: 
-
+```text
 [python3-1] [INFO] [1781188975.043684057] [service_planner]: [Planner] Command: 'Put the coffee inside the drawer'
 [python3-1] [INFO] [1781188975.045223532] [service_planner]: [Planner] → Generating plan…
 [python3-1] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
@@ -43,3 +43,4 @@ Bere plana:
 [python3-1]   2. PICK coffee  [policy: pick_coffee]
 [python3-1]   3. PLACE coffee → drawer  [policy: place_drawer]
 
+```text
