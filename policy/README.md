@@ -55,7 +55,7 @@
 ```
 ## FUNCIONAMIENTO
 
-## 2. Grafo de llamadas del entrenamiento (verificado)
+## Grafo de llamadas del entrenamiento 
 
 ```text
 run_training.py
@@ -113,7 +113,7 @@ Detalle importante del adaLN-zero: la última capa de `contact_emb` está inicia
 
 ---
 
-## 3. Pipeline de datos (converters)
+## Pipeline de datos (converters)
 
 `convert_to_robobuf_contact_hindsight.py` es el converter principal:
 
