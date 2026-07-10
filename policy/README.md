@@ -55,15 +55,15 @@
 ```
 ## FUNCIONAMIENTO
 
-## Grafo de llamadas del entrenamiento 
+## Grafo de llamadas del entrenamiento (verificado)
 
 ```text
 run_training.py
-    │  construye: python3 finetune_contact.py  (⚠ no está en GitHub; en tu máquina
+    │  construye: python3 finetune_contact.py 
     │             equivale a finetune.py con overrides agent=diffusion_contact,
     │             task=franka_2cam_contact, trainer=bc_contact)
     ↓
-finetune.py :: bc_finetune(cfg)              [@hydra.main → experiments/finetune*.yaml]
+finetune.py :: bc_finetune(cfg)              [@hydra.main → experiments/finetune_contact*.yaml]
     │
     ├── misc.init_job(cfg)                   → wandb init, resume detection
     ├── escribe agent_config.yaml            → lo reutiliza el eval script
@@ -109,11 +109,11 @@ buf.pkl: t.obs.obs["contact_anchor"]   (ya normalizado por el converter)
        (cond = mean(enc_cache) + time_enc)  y también _FinalLayer
 ```
 
-Detalle importante del adaLN-zero: la última capa de `contact_emb` está inicializada a cero (pesos y bias), así que al inicio el contacto no perturba los pesos preentrenados — exactamente como lo describes en el paper.
+La última capa de `contact_emb` está inicializada a cero (pesos y bias), así que al inicio el contacto no perturba los pesos preentrenados.
 
 ---
 
-## Pipeline de datos (converters)
+## 2. Pipeline de datos (converters)
 
 `convert_to_robobuf_contact_hindsight.py` es el converter principal:
 
@@ -130,7 +130,7 @@ get_contact_anchor(depth, frame_grasp, ee_pose, T_cam_to_ee, intrínsecos, u, v)
     # depth inválido → find_nearest_valid_depth_pixel (radio DEPTH_SEARCH_RADIUS)
     # backproject (u,v,depth) → p_cam
     # p_ee   = T_cam_to_ee @ p_cam
-    # p_base = T_ee_to_base @ T_cam_to_ee @ p_cam
+    # p_base = T_ee_to_base @ T_cam_to_ee @ p_cam   [Se gaurda en base como referencia para que en cada paso se mantenga el punto para pasar a EE]
     ↓
 hindsight relabeling: anchor re-expresado en el frame EE de cada paso
     # pre-grasp: EE_grasp → base → EE_i (el vector se encoge hacia 0)
@@ -147,7 +147,59 @@ salidas:
     contact_norm.json  ({"loc": [...], "scale": [...]})  ← claves loc/scale, no mean/std
     contact_debug.json (píxel usado, fallback sí/no, depth, p_cam/p_ee/p_base por episodio)
 ```
+El replay buffer NO re-normaliza, `contact_norm.json` se carga solo para (a) copiarlo junto al checkpoint y (b) decidir si el conditioning está activo (`_contact_loc is not None`).
 
-Nota de coherencia: el replay buffer NO re-normaliza — el comentario en `__getitem__` lo dice explícitamente ("already normalized by the converter"). `contact_norm.json` se carga solo para (a) copiarlo junto al checkpoint y (b) decidir si el conditioning está activo (`_contact_loc is not None`).
+---
+
+## 3. El modelo (`diffusion_contact.py`)
+
+```text
+DiffusionTransformerAgent (hereda BaseAgent)
+    ├── tokenize_obs: cam0/cam1 → ResNet18-GN (nopool) → tokens visuales
+    │                 obs (8D)  → Linear → 1 token extra (use_obs=add_token)   [7 ejes + el gripper]
+    ├── noise_net = _DiTNoiseNet
+    │       ├── encoder: 6 × _SelfAttnEncoder sobre s_t (con pos. sinusoidal)
+    │       │            → enc_cache (salida de cada capa, una por bloque decoder)
+    │       ├── time_net: embedding sinusoidal de τ → MLP (256→512)
+    │       ├── contact_emb: Linear(3→512) → SiLU → Linear(512→512, init a cero)
+    │       ├── decoder: 6 × _DiTDecoder (self-attn + MLP, ambos modulados adaLN
+    │       │            con cond = mean(enc_layer_i) + time_enc)
+    │       └── eps_out: _FinalLayer (adaLN + Linear → ε̂)
+    ├── DDIMScheduler: 100 pasos train / 8 pasos eval, squaredcos_cap_v2, ε-prediction
+    ├── forward(...)      → MSE(ε̂, ε) enmascarada por loss_mask → loss.mean()
+    └── get_actions(...)  → forward_enc una vez (cache) + bucle DDIM de 8 pasos
+```
+
+Dimensiones clave (de los yaml): `obs_dim=8`, `ac_dim=8` (7 joints + gripper), `hidden=512`, `ff=2048`, `nhead=8`, `dropout=0.1`. `imgs_per_cam = img_chunk + len(goal_indexes)` (con `goal_indexes=[]` e `img_chunk=1` → 1 imagen por cámara).
+
+---
+
+## 4. Evaluación en robot real (`eval_franka_2cam_contact.py`)
+
+```text
+checkpoint dir (agent_config.yaml, obs_config.yaml, ac_norm.json, contact_norm.json, .ckpt)
+    ↓
+Policy.__init__:
+    hydra.utils.instantiate(agent_config) → reconstruye el agente
+    load_state_dict + torch.compile(agent.get_actions)
+    carga loc/scale de acciones y contact_loc/contact_scale
+    ↓
+make_fr3_env_2cam_contact (eval_franka_env_2cam_contact.py) → env ROS2
+    ↓
+ContactAnchor.from_interactive_click:
+    pick_contact_pixel(rgb_256, depth_256)   ← INTERFAZ DE CLICK HUMANO
+    backproject + T → p_base (homogéneo), guarda contact_loc/scale
+    ↓
+bucle de control:
+    contact_point = anchor.step(...)   # (1,3) normalizado, en CUDA
+        pre-grasp : anchor re-expresado en el frame EE actual cada paso
+        post-grasp: congelado en el valor EE del primer cierre confirmado
+                    (espeja detect_contact_frame del converter: usa el gripper
+                     MEDIDO, no el comando)
+    pred = Policy._infer(obs, contact_point)          # get_actions, pred_horizon pasos
+    Policy.forward: EMA temporal (gamma) → desnormaliza → clip a límites FR3 → publica
+```
+
+La variante `eval_franka_2cam_contact_position.py` sustituye el click por el centroide que publica el planner VLM (pipeline SAM). Esto confirma la separación que estableciste en el paper: **click humano y VLM/SAM son dos scripts de deployment distintos**, no un flag del mismo script.
 
 ---
