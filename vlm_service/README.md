@@ -14,7 +14,7 @@
             # MODELS: dict primitiva → {script eval, ckpt, args, q_start, home_q}
             # escucha /selected_policy, lanza el eval script como subproceso,
             # publica /policy_execution_status, gestiona stop de emergencia
-```text
+´´
 1. LANGUAGE
 
 source  ~/Point2Skill_github/vlm_service/install/setup.bash
