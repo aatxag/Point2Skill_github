@@ -1,5 +1,4 @@
 
-````markdown
 ## Structure
 
 ```text
