@@ -1,112 +1,205 @@
-# The Ingredients for Robotic Diffusion Transformers
-[![arXiv](https://img.shields.io/badge/arXiv-2410.10088-df2a2a.svg)](https://arxiv.org/pdf/2410.10088)
-[![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-yellow)](https://huggingface.co/datasets/oier-mees/BiPlay)
-[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Static Badge](https://img.shields.io/badge/Project-Page-a)](https://dit-policy.github.io/)
+## ESQUEMA GENERAL
 
-[Sudeep Dasari](https://sudeepdasari.github.io/), [Oier Mees](https://www.oiermees.com/),  [Sebastian Zhao](http://linkedin.com/in/sebbyzhao/), [Mohan Kumar Srirama](https://scholar.google.com/citations?user=Yu18Q6MAAAAJ&hl=en/), [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/)
-<hr style="border: 2px solid gray;"></hr>
-
-This repository offers an implementation of our improved Diffusion Transformer Policy (DiT-Block Policy), which achieves state-of-the-art manipulation results on long horizon bi-manual ALOHA robots and single-arm DROID Franka robots. This repo also allows easy use of our advanced pre-trained representations from [prior](https://data4robotics.github.io) [work](https://hrp-robot.github.io). We've succesfully deployed policies from this code on Franka robots (w/ [DROID](https://github.com/droid-dataset/droid/tree/main) and [MaNiMo](https://github.com/AGI-Labs/manimo)), [ALOHA](https://tonyzhaozh.github.io/aloha/) robots, and on [LEAP hands](https://www.leaphand.com). Check out our [eval scripts](eval_scripts/README.md) for more information. These policies can also be tested in simulation (see [Sim README](https://github.com/SudeepDasari/data4robotics/tree/dit_release/data4robotics/sim)).
-
-![](media/aloha_teaser.png)
-
-## Installation
-Our repository is easy to install using miniconda or anaconda:
-
+```text
+├── policy/
+│   ├── finetune.py              # Versión original (sin obs_config.yaml ni wandb.log).
+│   ├── setup.py, env.yml        # Paquete data4robotics + entorno conda.
+│   ├── jobs.sh, diffuse_jobs.sh # Lanzadores antiguos estilo slurm/bash.
+│   │
+│   ├── converters/
+│   │   ├── convert_to_robobuf_contact.py            # versión base
+│   │   ├── convert_to_robobuf_contact_hindsight.py  # ★ la principal (980 líneas)
+│   │   ├── convert_to_robobuf_place_hindsight.py    # variante Place
+│   │   └── my_data/camera_intrinsics.yaml, hand_eye_result.yaml  # fx,fy,cx,cy y T_cam_to_ee
+│   │
+│   ├── data4robotics/
+│   │   ├── __init__.py          # solo exporta load_resnet18, load_vit
+│   │   ├── agent.py             # BaseAgent: tokenize_obs (imgs→tokens + obs como token extra)
+│   │   ├── load_pretrained.py   # carga ResNet18/ViT preentrenados
+│   │   ├── models/
+│   │   │   ├── diffusion_contact.py   # ★ DiffusionTransformerAgent + _DiTNoiseNet
+│   │   │   ├── diffusion_unet.py      # variante UNet
+│   │   │   ├── resnet.py, vit.py      # encoders visuales
+│   │   │   ├── base.py, action_distributions.py, action_transformer.py
+│   │   ├── replay_buffer_contact.py   # ★ RobobufReplayBuffer (batch de 4 elementos)
+│   │   ├── task_contact.py            # ★ BCTaskContact (eval: val loss, L2, LSig)
+│   │   │                              # ⚠ importa data4robotics.task, que NO está en el
+│   │   │                              #   source tree (solo en install/, ver §8)
+│   │   ├── trainers/
+│   │   │   ├── base.py                # BaseTrainer: optim, scheduler, checkpoints, log
+│   │   │   ├── bc_contact.py          # ★ BehaviorCloning.training_step (desempaqueta 3 o 4)
+│   │   │   └── utils.py               # optim_builder, schedule_builder
+│   │   ├── transforms.py              # preproc / medium / gpu transforms
+│   │   └── misc.py                    # init_job, GLOBAL_STEP, checkpoint handler
+│   │
+│   ├── experiments/                   # configs Hydra
+│   │   ├── finetune_contact.yaml      # defaults: diffusion_contact + franka_2cam_contact + bc_contact
+│   │   ├── finetune.yaml              # versión sin contacto
+│   │   ├── agent/diffusion_contact.yaml       # DiT: hidden 512, 6 bloques, 8 heads,
+│   │   │                                      # train_steps=100, eval_steps=8 (DDIM)
+│   │   ├── agent/features/resnet_gn_nopool.yaml  # encoder por defecto del agente contact
+│   │   ├── task/franka_2cam_contact.yaml      # obs_dim=8, ac_dim=8, cams [0,1]
+│   │   ├── trainer/bc_contact.yaml            # AdamW + cosine warmup 2000
+│   │   └── hydra/launcher/slurm.yaml
+│   │
+│   ├── eval_scripts/
+│   │   ├── eval_franka_2cam_contact.py        # ★ eval con click humano (832 líneas)
+│   │   ├── eval_franka_env_2cam_contact.py    # make_fr3_env_2cam_contact (env ROS2)
+│   │   ├── eval_franka_2cam_contact_position.py  # variante: recibe centroide del VLM
+│   │   ├── eval_franka_2cam_place_contact.py / eval_franka_2cam_contact_place.py  # Place
+│   │   └── README.md
+│   │
+│   └── install/                       # ⚠ artefactos de colcon build commiteados.
+│       └── .../site-packages/data4robotics/   # aquí SÍ están task.py y replay_buffer.py
+│                                              # que faltan en el source tree
 ```
-conda env create -f env.yml
-conda activate data4robotics
-pip install git+https://github.com/AGI-Labs/robobuf.git
-pip install git+https://github.com/facebookresearch/r3m.git
-pip install -e ./
-pre-commit install  # required for pushing back to the source git
+## FUNCIONAMIENTO
+
+## Grafo de llamadas del entrenamiento (verificado)
+
+```text
+run_training.py
+    │  construye: python3 finetune_contact.py 
+    │             equivale a finetune.py con overrides agent=diffusion_contact,
+    │             task=franka_2cam_contact, trainer=bc_contact)
+    ↓
+finetune.py :: bc_finetune(cfg)              [@hydra.main → experiments/finetune_contact*.yaml]
+    │
+    ├── misc.init_job(cfg)                   → wandb init, resume detection
+    ├── escribe agent_config.yaml            → lo reutiliza el eval script
+    ├── escribe obs_config.yaml              → cams + transform "preproc" para eval
+    │
+    ├── agent   = hydra.utils.instantiate(cfg.agent)
+    │       → data4robotics.models.diffusion_contact.DiffusionTransformerAgent
+    │           ├── BaseAgent.__init__       (agent.py: encoder visual + obs token)
+    │           └── _DiTNoiseNet(...)        (noise net con contact_emb)
+    │
+    ├── trainer = hydra.utils.instantiate(cfg.trainer, model=agent)
+    │       → data4robotics.trainers.bc_contact.BehaviorCloning (hereda BaseTrainer)
+    │
+    ├── task    = hydra.utils.instantiate(cfg.task, batch_size, num_workers)
+    │       → data4robotics.task_contact.BCTaskContact (hereda DefaultTask)
+    │           ├── train_buffer → replay_buffer_contact.RobobufReplayBuffer(mode=train)
+    │           └── test_buffer  → RobobufReplayBuffer(mode=test)
+    │
+    └── loop (max_iterations):
+            batch = next(task.train_loader)
+            trainer.optim.zero_grad()
+            loss = trainer.training_step(batch, GLOBAL_STEP)
+                 └── (imgs,obs), actions, mask, contact_point = batch   # si len==4
+                     model(imgs, obs, ac_flat, mask_flat, contact_point=contact_point)
+            loss.backward(); trainer.optim.step()
+            cada schedule_freq → trainer.step_schedule()
+            cada eval_freq     → task.eval(trainer, step)   # val loss + AC L2 + AC LSig
+            cada save_freq     → trainer.save_checkpoint()
 ```
 
-## Training DiT Policies (and Baselines)
-First, you're going to need to convert your training trajectories into our [robobuf](https://github.com/AGI-Labs/robobuf/tree/main) format (pseudo-code below). Check out some example ALOHA and DROID conversion code [here](https://github.com/AGI-Labs/r2d2_to_robobuf).
+Cómo llega el `contact_point` al modelo, extremo a extremo:
 
-```
-def _resize_and_encode(rgb_img, size=(256,256)):
-    bgr_image = cv2.resize(bgr_image, size, interpolation=cv2.INTER_AREA)
-    _, encoded = cv2.imencode(".jpg", bgr_image)
-    return encoded
-
-def convert_trajectories(input_trajs, out_path):
-    out_buffer = []
-    for traj in tqdm(input_trajs):
-        out_traj = []
-        for in_obs, in_ac, in_reward in enumerate(data):
-            out_obs = dict(state=np.array(in_obs['state']).astype(np.float32),
-                           enc_cam_0=_resize_and_encode(in_obs['image']))
-            out_action = np.array(in_ac).astype(np.float32)
-            out_reward = float(in_reward)
-            out_traj.append((out_obs, out_action, out_reward))
-        out_buffer.append(out_traj)
-
-    with open(os.path.join(out_path, 'buf.pkl'), 'wb') as f:
-        pkl.dump(out_trajs, f)
+```text
+buf.pkl: t.obs.obs["contact_anchor"]   (ya normalizado por el converter)
+    ↓  RobobufReplayBuffer.__init__ lo extrae por transición
+    ↓  __getitem__ devuelve ((imgs,obs), a_t, mask, contact_anchor)  ← batch de 4
+    ↓  BehaviorCloning.training_step lo desempaqueta y lo pasa como kwarg
+    ↓  DiffusionTransformerAgent.forward(..., contact_point=...)
+    ↓  _DiTNoiseNet.forward_dec:
+           time_enc = time_net(τ)
+           if contact_point: time_enc += contact_emb(contact_point)   ← adaLN-zero
+    ↓  time_enc modula TODOS los bloques _DiTDecoder vía _ShiftScaleMod/_ZeroScaleMod
+       (cond = mean(enc_cache) + time_enc)  y también _FinalLayer
 ```
 
-Once the conversion is complete, you can train our models using the example commands below:
+La última capa de `contact_emb` está inicializada a cero (pesos y bias), así que al inicio el contacto no perturba los pesos preentrenados.
+
+---
+
+## 2. Pipeline de datos (converters)
+
+`convert_to_robobuf_contact_hindsight.py` es el converter principal:
+
+```text
+episodios crudos (rgb cam0/cam1, cam0_depth, ee_pose, gripper, gripper_cmd)
+    ↓
+detect_contact_frame(g_trace, cmd_trace)
+    # 1. primer 1→-1 en gripper_cmd (cmd_close)
+    # 2. valida caída física ≥ min_drop
+    # 3. frame donde la apertura se estabiliza (plateau) = contacto físico
+    ↓
+get_contact_anchor(depth, frame_grasp, ee_pose, T_cam_to_ee, intrínsecos, u, v)
+    # píxel (u,v): CONTACT_U/V por defecto, o contact_pixel.json por episodio
+    # depth inválido → find_nearest_valid_depth_pixel (radio DEPTH_SEARCH_RADIUS)
+    # backproject (u,v,depth) → p_cam
+    # p_ee   = T_cam_to_ee @ p_cam
+    # p_base = T_ee_to_base @ T_cam_to_ee @ p_cam   [Se gaurda en base como referencia para que en cada paso se mantenga el punto para pasar a EE]
+    ↓
+hindsight relabeling: anchor re-expresado en el frame EE de cada paso
+    # pre-grasp: EE_grasp → base → EE_i (el vector se encoge hacia 0)
+    # ventana ± (contact_keep_before=3, contact_keep_after=8) preservada en dedup
+    ↓
+normalización global del dataset:
+    contact_loc   = (c_min + c_max)/2
+    contact_scale = (c_max − c_min)/2  (clip min 1e-6)
+    ca_norm = clip((anchor − loc)/scale, −1, 1)
+    ↓
+salidas:
+    buf.pkl            (obs.obs["contact_anchor"] YA normalizado)
+    ac_norm.json       (loc/scale de acciones)
+    contact_norm.json  ({"loc": [...], "scale": [...]})  ← claves loc/scale, no mean/std
+    contact_debug.json (píxel usado, fallback sí/no, depth, p_cam/p_ee/p_base por episodio)
 ```
-# Training DiT Policy (Diffusion Transformer w/ adaLN + ResNet Tokenizer)
-python finetune.py exp_name=test agent=diffusion task=end_effector_r6 agent/features=resnet_gn agent.features.restore_path=/pat/to/resnet18/IN_1M_resnet18.pth  trainer=bc_cos_sched ac_chunk=100
+El replay buffer NO re-normaliza, `contact_norm.json` se carga solo para (a) copiarlo junto al checkpoint y (b) decidir si el conditioning está activo (`_contact_loc is not None`).
 
-## SOME EXAMPLE BASELINES
+---
 
-# Gaussian Mixture Model bc-policy with SOUP representations
-python finetune.py exp_name=test agent.features.restore_path=/path/to/SOUP_1M_DH.pth buffer_path=/data/path/buffer.pkl
+## 3. El modelo (`diffusion_contact.py`)
 
-# Diffusion Policy (U-Net head) w/ HRP representations
-python finetune.py exp_name=test agent=diffusion_unet task=end_effector_r6 agent/features=vit_base agent.features.restore_path=/path/to/IN_hrp.pth buffer_path=/data/path/buffer.pkl trainer=bc_cos_sched ac_chunk=16
-```
-This will result in a policy checkpoint saved in the `bc_finetune/<exp_name>` folder.
-
-## Downloading the Bi-Play Dataset
-We also provide an open-sourced dataset, named BiPlay, with over 7000 diverse, text-annotated, bi-manual expert demonstrations collected on an ALOHA robot. You may download the dataset from the following [HuggingFace dataset](https://huggingface.co/datasets/oier-mees/BiPlay). It can be loaded out of the box with the dataloader from [Octo](https://octo-models.github.io).
-
-<p align="center">
-<img src="media/aloha_dataset.png" alt="Aloha Dataset" width="400"/>
-</p>
-
-
-## Using Pre-Trained Features
-You can easily download our pre-trained represenations using the provided script: `./download_features.sh`. You may also download the features individually on our [release website](https://www.cs.cmu.edu/~data4robotics/release/).
-
-The features are very modular, and easy to use in your own code-base! Please refer to the [example code](https://github.com/SudeepDasari/data4robotics/blob/main/pretrained_networks_example.py) if you're interested.
-
-## Policy Deployment (Sim and Real)
-
-Detailed instructions and eval scripts for real world deployment are provided [here](https://github.com/SudeepDasari/data4robotics/tree/dit_release/eval_scripts). Similarly, you can reproduce our sim results, using the command/code provided [here](https://github.com/SudeepDasari/data4robotics/tree/dit_release/data4robotics/sim).
-
-## Citations
-If you find this codebase or the diffusion transformer useful, please cite:
-```
-@article{dasari2024ditpi,
-    title={The Ingredients for Robotic Diffusion Transformers},
-    author = {Sudeep Dasari and Oier Mees and Sebastian Zhao and Mohan Kumar Srirama and Sergey Levine},
-    journal = {arXiv preprint arXiv:2410.10088},
-    year={2024},
-}
+```text
+DiffusionTransformerAgent (hereda BaseAgent)
+    ├── tokenize_obs: cam0/cam1 → ResNet18-GN (nopool) → tokens visuales
+    │                 obs (8D)  → Linear → 1 token extra (use_obs=add_token)   [7 ejes + el gripper]
+    ├── noise_net = _DiTNoiseNet
+    │       ├── encoder: 6 × _SelfAttnEncoder sobre s_t (con pos. sinusoidal)
+    │       │            → enc_cache (salida de cada capa, una por bloque decoder)
+    │       ├── time_net: embedding sinusoidal de τ → MLP (256→512)
+    │       ├── contact_emb: Linear(3→512) → SiLU → Linear(512→512, init a cero)
+    │       ├── decoder: 6 × _DiTDecoder (self-attn + MLP, ambos modulados adaLN
+    │       │            con cond = mean(enc_layer_i) + time_enc)
+    │       └── eps_out: _FinalLayer (adaLN + Linear → ε̂)
+    ├── DDIMScheduler: 100 pasos train / 8 pasos eval, squaredcos_cap_v2, ε-prediction
+    ├── forward(...)      → MSE(ε̂, ε) enmascarada por loss_mask → loss.mean()
+    └── get_actions(...)  → forward_enc una vez (cache) + bucle DDIM de 8 pasos
 ```
 
-And if you use the representations, please cite:
-```
-@inproceedings{dasari2023datasets,
-      title={An Unbiased Look at Datasets for Visuo-Motor Pre-Training},
-      author={Dasari, Sudeep and Srirama, Mohan Kumar and Jain, Unnat and Gupta, Abhinav},
-      booktitle={Conference on Robot Learning},
-      year={2023},
-      organization={PMLR}
-}
+Dimensiones clave (de los yaml): `obs_dim=8`, `ac_dim=8` (7 joints + gripper), `hidden=512`, `ff=2048`, `nhead=8`, `dropout=0.1`. `imgs_per_cam = img_chunk + len(goal_indexes)` (con `goal_indexes=[]` e `img_chunk=1` → 1 imagen por cámara).
 
-@inproceedings{kumar2024hrp,
-    title={HRP: Human Affordances for Robotic Pre-Training},
-    author = {Mohan Kumar Srirama and Sudeep Dasari and Shikhar Bahl and Abhinav Gupta},
-    booktitle = {Proceedings of Robotics: Science and Systems},
-    address  = {Delft, Netherlands},
-    year = {2024},
-}
+---
+
+## 4. Evaluación en robot real (`eval_franka_2cam_contact.py`)
+
+```text
+checkpoint dir (agent_config.yaml, obs_config.yaml, ac_norm.json, contact_norm.json, .ckpt)
+    ↓
+Policy.__init__:
+    hydra.utils.instantiate(agent_config) → reconstruye el agente
+    load_state_dict + torch.compile(agent.get_actions)
+    carga loc/scale de acciones y contact_loc/contact_scale
+    ↓
+make_fr3_env_2cam_contact (eval_franka_env_2cam_contact.py) → env ROS2
+    ↓
+ContactAnchor.from_interactive_click:
+    pick_contact_pixel(rgb_256, depth_256)   ← INTERFAZ DE CLICK HUMANO
+    backproject + T → p_base (homogéneo), guarda contact_loc/scale
+    ↓
+bucle de control:
+    contact_point = anchor.step(...)   # (1,3) normalizado, en CUDA
+        pre-grasp : anchor re-expresado en el frame EE actual cada paso
+        post-grasp: congelado en el valor EE del primer cierre confirmado
+                    (espeja detect_contact_frame del converter: usa el gripper
+                     MEDIDO, no el comando)
+    pred = Policy._infer(obs, contact_point)          # get_actions, pred_horizon pasos
+    Policy.forward: EMA temporal (gamma) → desnormaliza → clip a límites FR3 → publica
 ```
+
+La variante `eval_franka_2cam_contact_position.py` sustituye el click por el centroide que publica el planner VLM (pipeline SAM). Esto confirma la separación que estableciste en el paper: **click humano y VLM/SAM son dos scripts de deployment distintos**, no un flag del mismo script.
+
+---

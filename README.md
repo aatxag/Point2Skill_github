@@ -1,63 +1,145 @@
-# POINT2SKILL
+# Point2Skill: Interactive 3D Goal-Conditioned Diffusion Primitives for Robot Control
 
-Project web-page: https://point2skill.github.io/Point2Skill-web/
+<p align="center">
+  <a href="https://point2skill.github.io/Point2Skill-web/">
+    <img src="https://img.shields.io/badge/Project-Page-brightgreen" alt="Project Page">
+  </a>
 
+  <!-- Add these badges when the corresponding links are public -->
+  <!--
+  <a href="PAPER_URL">
+    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b" alt="Paper">
+  </a>
+  <a href="VIDEO_URL">
+    <img src="https://img.shields.io/badge/Video-Demo-red" alt="Video">
+  </a>
+  -->
 
+  <img src="https://img.shields.io/badge/Python-3.9-blue" alt="Python 3.9">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License">
+</p>
 
+<p align="center">
+  <a href="https://point2skill.github.io/Point2Skill-web/"><b>🌐 Project Page</b></a>
+  &nbsp;·&nbsp;
+  <b>📄 Paper coming soon</b>
+</p>
 
-## POLITIKAK EXEKUTATU AHAL IZATEKO
+<p align="center">
+  <img src="assets/videos/shopping.gif" width="24%">
+  <img src="assets/videos/breakdast.gif" width="24%">
+  <img src="assets/videos/insert_egg.gif" width="24%">
+  <img src="assets/videos/put_coffee_drawer.gif" width="24%">
+</p>
 
-1. Terminala
+**Point2Skill** is a framework for interactive robot manipulation that turns
+**3D target points into steerable and reusable diffusion-based manipulation skills**.
 
-conda activate data4robotics_py310
-source ~/franka_ros2_ws/install/setup.bash
-ros2 launch franka_fr3_arm_controllers franka.launch.py arm_id:=fr3 robot_ip:=172.17.6.130 
+Given a target point selected by a **human or a Vision-Language Model (VLM)**,
+Point2Skill executes goal-conditioned manipulation primitives such as
+**Pick, Place, Insert, Open, and Close**. These primitives can be reused across
+objects and spatial configurations and composed to solve complex long-horizon tasks.
 
-2. Terminala
+<p align="center">
+  <b>Click a 3D point → Select a skill → Execute<b>
+</p>
 
-source ~/franka_ros2_ws/install/setup.bash
-ros2 control load_controller --set-state active joint_impedance_controller
+---
 
-3. Terminala
+## Highlights
 
-source ~/franka_ros2_ws/install/setup.bash
-ros2 launch franka_gripper gripper.launch.py robot_ip:=172.17.6.130 namespace:=franka_gripper
+- 🎯 **3D goal-conditioned control:** specify exactly where the robot should interact.
+- 🧩 **Reusable skill primitives:** Pick, Place, Insert, Open, and Close.
+- 🔗 **Long-horizon composition:** combine primitives without task-specific retraining.
+- 🖱️ **Human-interactive interface:** command the robot by clicking a target in the scene.
+- 🤖 **VLM-driven execution:** a vision-language model can select both the primitive and its target.
+- 🌍 **Generalization:** point-based conditioning enables transfer across object categories and spatial configurations.
 
-4. Terminala
+## Method Overview
 
-ros2 run franka_demo_recorder usb_cam_publisher --ros-args   -p device:=/dev/video6   -p frame_width:=1280   -p frame_height:=960   -p fps:=60   -p topic:=/camera/camera_ext/color/image_raw
+Point2Skill bridges high-level task intent and low-level robot control through
+**3D goal-conditioned diffusion primitives**.
 
-5. Terminala
+1. **Select a 3D goal.** A human or VLM identifies the desired interaction point.
+2. **Condition the skill.** The 3D goal embedding modulates a Diffusion Transformer through adaptive Layer Normalization (adaLN).
+3. **Execute a primitive.** The robot performs Pick, Place, Insert, Open, or Close.
+4. **Compose behaviors.** Multiple primitives are sequenced to solve long-horizon manipulation tasks.
 
-ros2 launch realsense2_camera rs_launch.py     camera_name:=camera_wrist     camera_namespace:=camera     serial_no:="'141122079579'"     enable_color:=true     enable_depth:=true     align_depth.enable:=true 
+<p align="center">
+  <img src="assets/github_cover.png" width="100%" alt="Point2Skill overview">
+</p>
 
+## Primitive Skills
 
-## Gripperra ireki/itxi nahi bada
+| Primitive | Description |
+|---|---|
+| **Pick** | Grasp a selected object from a 3D target point. |
+| **Place** | Move and release an object at a goal-specified target region. |
+| **Insert** | Align and insert an object into a target receptacle. |
+| **Open** | Interact with and open a selected articulated object. |
+| **Close** | Interact with and close a selected articulated object. |
 
-source ~/franka_ros2_ws/install/setup.bash
-ros2 action send_goal /franka_gripper/franka_gripper/move franka_msgs/action/Move "{width: 0.08, speed: 0.1}"
+## Long-Horizon Tasks
 
-source ~/franka_ros2_ws/install/setup.bash
-ros2 action send_goal /franka_gripper/franka_gripper/grasp franka_msgs/action/Grasp "{width: 0.0, speed: 0.1, force: 20.0, epsilon: {inner: 0.005, outer: 0.03}}"
+The same reusable primitives can be composed to execute complex manipulation tasks:
 
-# Modelo bat bakarrik
+- 🛒 **Shopping:** repeatedly pick and place requested objects into a basket.
+- ☕ **Put Coffee in Drawer:** Open → Pick → Place → Close.
+- 🍳 **Prepare Breakfast:** compose Pick, Place, and Insert across multiple objects.
 
-python3   eval_franka_2cam_contact.py   /home/labiiwa/Point2Skill_github/dit-policy/bc_finetune/generalization_twoposes/wandb_None_franka_2cam_contact_resnet_gn_2026-06-19_08-48-19/generalization_twoposes.ckpt   --gamma 1.0   --T 500   --action_idx 3   --auto_lift   --grasp_confirm_steps 3   --lift_trigger 0.04
+---
 
-### Open bakarrik adb
+## Installation
 
-python3 eval_franka_2cam_contact.py   /home/labiiwa/Point2Skill_github/dit-policy/bc_finetune/open/wandb_None_franka_2cam_contact_resnet_gn_2026-06-09_14-25-12/open.ckpt   --gamma 1.0   --T 500   --action_idx 3   --lift_scale 2.0   --q_start -0.0714000016450882 -1.264799952507019 0.10849999636411667 -2.9293999671936035 0.1451999992132187 2.075200080871582 -2.3701999187469482
+```bash
+git clone https://github.com/aatxag/Point2Skill_github.git
+cd Point2Skill_github
 
-### Hasierako puntua gorde nahi bada
+conda create -n point2skill python=3.9
+conda activate point2skill
 
-cd dit-policy
-cd eval_scripts
+# Add your installation command here
+# pip install -r requirements.txt
+```
 
-python3 eval_franka_2cam_contact_old.py   /home/labiiwa/dit-policy/bc_finetune/close/wandb_None_franka_2cam_contact_resnet_gn_2026-06-12_18-46-27/close.ckpt   --gamma 1.0 --T 500 --action_idx 3 --lift_scale 2.0
+## Training
 
+```bash
+python3 run_training.py
+```
+## Acknowledgements
 
-# Web-a 
+This repository is built upon and adapted from the
+[DiT-Block Policy](https://github.com/SudeepDasari/dit-policy) codebase introduced in
+*The Ingredients for Robotic Diffusion Transformers*.
 
-https://point2skill.github.io/Point2Skill-web/
+We thank the authors for open-sourcing their implementation.
 
-git pull origin main
+## Citation
+
+If you find Point2Skill useful for your research, please cite our work:
+
+```bibtex
+@inproceedings{point2skill2026,
+  title     = {Point2Skill: Interactive 3D Goal-Conditioned Diffusion Primitives for Robot Control},
+  author    = {Anonymous Author(s)},
+  booktitle = {Conference on Robot Learning},
+  year      = {2026}
+}
+```
+
+Point2Skill builds upon the DiT-Block Policy codebase. If you use this codebase, please also cite:
+
+```bibtex
+@article{dasari2024ditpi,
+  title   = {The Ingredients for Robotic Diffusion Transformers},
+  author  = {Sudeep Dasari and Oier Mees and Sebastian Zhao and Mohan Kumar Srirama and Sergey Levine},
+  journal = {arXiv preprint arXiv:2410.10088},
+  year    = {2024}
+}
+```
+
+## License
+
+This project is released under the MIT License.
+

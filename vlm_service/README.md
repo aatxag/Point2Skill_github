@@ -1,3 +1,22 @@
+
+## Structure
+
+```text
+└── vlm_service/                       # workspace ROS2 (3 paquetes)
+    ├── run_planner.sh
+    ├── service_language/              # nodo de entrada de lenguaje
+    │   └── src/service_language/language_publisher.py (+ _answer.py)
+    │       # publica el comando del usuario en /topic_prompt
+    ├── service_planner/               # ★ el cerebro VLM
+    │   └── src/service_planner/planner.py (740 líneas)
+    │       # Qwen-VL genera plan JSON → para PICK: bbox Qwen → máscara SAM (vit_b)
+    │       # → centroide → /perception/centroid; pasos → /selected_policy
+    └── service_primitives/            # ★ ejecutor de primitivas
+        └── src/service_primitives/primitives.py
+            # MODELS: dict primitiva → {script eval, ckpt, args, q_start, home_q}
+            # escucha /selected_policy, lanza el eval script como subproceso,
+            # publica /policy_execution_status, gestiona stop de emergencia
+```text
 1. LANGUAGE
 
 source  ~/Point2Skill_github/vlm_service/install/setup.bash
@@ -16,14 +35,12 @@ ros2 launch service_primitives primitives.launch.py
 
 
 
-
-
 # Language en sarrera
 
 " Put the coffee inside the drawer "
 
 Bere plana: 
-
+```text
 [python3-1] [INFO] [1781188975.043684057] [service_planner]: [Planner] Command: 'Put the coffee inside the drawer'
 [python3-1] [INFO] [1781188975.045223532] [service_planner]: [Planner] → Generating plan…
 [python3-1] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
@@ -43,3 +60,4 @@ Bere plana:
 [python3-1]   2. PICK coffee  [policy: pick_coffee]
 [python3-1]   3. PLACE coffee → drawer  [policy: place_drawer]
 
+```text

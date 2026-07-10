@@ -124,11 +124,7 @@ def _load_logo():
 
 def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     """
-    UI blanca con logo Point2Skill para seleccionar el pixel de contacto.
-    Panel izquierdo: imagen + crosshair en vivo.
-    Panel derecho: cursor, depth y punto seleccionado.
-    Se cierra 1 s después del click.
-    Devuelve (u, v) en coordenadas 256×256, o None si se cierra sin click.
+    Interface for clicking the point
     """
     rgb_display = rgb_256[:, :, ::-1].copy()   # BGR → RGB
     valid_mask  = (depth_256 > 0) & (depth_256 < DEPTH_MAX_VALID_MM)
@@ -143,7 +139,7 @@ def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     HEADER_BOTTOM = 0.80
     DIVIDER_Y     = HEADER_BOTTOM - 0.006
 
-    # ── Logo (fondo blanco, se ve perfecto) ──────────────────────────────
+
     if logo_rgb is not None:
         ax_logo = fig.add_axes([0.012, HEADER_BOTTOM + 0.010,
                                 0.40,  HEADER_TOP - HEADER_BOTTOM - 0.014])
@@ -191,7 +187,7 @@ def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     ax.text(2, 253, "256×256", fontsize=6, color=_W_DIM,
             fontfamily="monospace", va="bottom")
 
-    # Crosshair en vivo
+
     hline = ax.axhline(-999, color=_W_ACCENT2, linewidth=0.8,
                         alpha=0.7, linestyle="--")
     vline = ax.axvline(-999, color=_W_ACCENT2, linewidth=0.8,

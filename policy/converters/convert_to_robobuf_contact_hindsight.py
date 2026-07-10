@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 """
 Conversión recorder sync (2 cámaras + depth) → robobuf con ABSOLUTE ACTIONS + CONTACT ANCHOR
-Compatible con recorder_node_two_cam.py V3.
-
-VERSIÓN NO-SPLIT: cada episode_XXXX se convierte en una única trayectoria.
-No se hace resampling ni se divide por gaps temporales.
-
+Compatible con recorder_node_two_cam.py 
 Usa:
 - posiciones articulares (q) y estado de la pinza para estado/acción
 - contact anchor 3D extraído desde cam0_depth en el frame de grasp
@@ -261,7 +257,7 @@ def get_contact_anchor(
 
     p_cam = backproject(used_u, used_v, depth_m, fx, fy, cx, cy)
 
-    # Convención asumida:
+    # TRANSFORMACIONES:
     # T_cam_to_ee transforma puntos del frame cámara al frame ee
     # T_ee_to_base transforma puntos del frame ee al frame base
 
