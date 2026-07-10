@@ -10,8 +10,10 @@ import traceback
 import numpy as np
 import torch
 import tqdm
+import yaml
 from omegaconf import DictConfig, OmegaConf
 
+import wandb
 import hydra
 from data4robotics import misc, transforms
 
@@ -19,7 +21,7 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 
 
 @hydra.main(
-    config_path=os.path.join(base_path, "experiments"), config_name="finetune.yaml"
+    config_path=os.path.join(base_path, "experiments"), config_name="finetune_contact"
 )
 def bc_finetune(cfg: DictConfig):
     try:
@@ -33,6 +35,18 @@ def bc_finetune(cfg: DictConfig):
         with open("agent_config.yaml", "w") as f:
             agent_yaml = OmegaConf.to_yaml(cfg.agent, resolve=True)
             f.write(agent_yaml)
+
+        # save obs_config.yaml for eval (cameras and preprocessing transform)
+        cam_indexes = list(cfg.task.train_buffer.cam_indexes)
+        obs_config = {
+            "imgs": [f"cam{i}" for i in cam_indexes],
+            "transform": {
+                "_target_": "data4robotics.transforms.get_transform_by_name",
+                "name": "preproc",
+            },
+        }
+        with open("obs_config.yaml", "w") as f:
+            yaml.dump(obs_config, f, default_flow_style=False)
 
         agent = hydra.utils.instantiate(cfg.agent)
         trainer = hydra.utils.instantiate(cfg.trainer, model=agent, device_id=0)
@@ -77,10 +91,13 @@ def bc_finetune(cfg: DictConfig):
 
             # handle the image transform on GPU if specified
             if gpu_transform is not None:
-                (imgs, obs), actions, mask = batch
+                (imgs, obs), actions, mask = batch[0][0], batch[1], batch[2]
                 imgs = {k: v.to(trainer.device_id) for k, v in imgs.items()}
                 imgs = {k: gpu_transform(v) for k, v in imgs.items()}
-                batch = ((imgs, obs), actions, mask)
+                if len(batch) == 4:
+                    batch = ((imgs, obs), actions, mask, batch[3])
+                else:
+                    batch = ((imgs, obs), actions, mask)
 
             trainer.optim.zero_grad()
             loss = trainer.training_step(batch, misc.GLOBAL_STEP)
@@ -88,6 +105,8 @@ def bc_finetune(cfg: DictConfig):
             trainer.optim.step()
 
             pbar.set_postfix(dict(Loss=loss.item()))
+            if wandb.run is not None:
+                wandb.log({"train/task_loss": loss.item()}, step=misc.GLOBAL_STEP)
             misc.GLOBAL_STEP += 1
 
             if misc.GLOBAL_STEP % cfg.schedule_freq == 0:
@@ -113,3 +132,4 @@ def bc_finetune(cfg: DictConfig):
 
 if __name__ == "__main__":
     bc_finetune()
+
