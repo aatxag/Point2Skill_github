@@ -17,14 +17,17 @@ __pycache__/
 *.npz
 
 # ── Training data & model weights directories ─────────────────────────────────
-dit-policy/data_robobuf/
-dit-policy/bc_finetune/
-dit-policy/visual_features/
+policy/data_robobuf/
+policy/bc_finetune/
+policy/visual_features/
 
 # ── colcon build artifacts ────────────────────────────────────────────────────
 vlm_service/build/
 vlm_service/install/
 vlm_service/log/
+policy/build/
+policy/install/
+policy/log/
 
 # ── ROS2 / misc ───────────────────────────────────────────────────────────────
 .ros/

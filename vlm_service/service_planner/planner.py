@@ -41,7 +41,9 @@ import image2numpy
 
 _DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-_MODEL_ID = "/home/labiiwa/ros2_ws/models/Qwen2.5-VL-3B-Instruct"
+_MODEL_ID = os.environ.get(
+    "POINT2SKILL_VLM_MODEL", "/home/labiiwa/ros2_ws/models/Qwen2.5-VL-3B-Instruct"
+)
 print(f"[Planner] Loading Qwen from: {_MODEL_ID}")
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     _MODEL_ID,
@@ -55,7 +57,9 @@ print("[Planner] Qwen ready.")
 
 # ─── SAM model (loaded once at import time) ───────────────────────────────────
 
-_SAM_CHECKPOINT = "/home/labiiwa/ros2_ws/models/sam_vit_b.pth"
+_SAM_CHECKPOINT = os.environ.get(
+    "POINT2SKILL_SAM_CKPT", "/home/labiiwa/ros2_ws/models/sam_vit_b.pth"
+)
 print(f"[Planner] Loading SAM from: {_SAM_CHECKPOINT}")
 _sam = sam_model_registry["vit_b"](checkpoint=_SAM_CHECKPOINT)
 _sam.to(_DEVICE)

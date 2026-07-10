@@ -34,8 +34,8 @@ train_transform: medium
 
 wandb:
   name: null
-  project: human_aloha
+  project: policy
   group: ${exp_name}
   sweep_name_prefix: eval
   debug: False
-  entity: cmu-agi-lab
+  entity: aatxag-mondragon-university

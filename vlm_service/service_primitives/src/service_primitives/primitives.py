@@ -13,9 +13,24 @@ from rclpy.qos import QoSProfile
 from std_msgs.msg import String
 
 # ─── Policy registry ─────────────────────────────────────────────────────────
-_CONDA_PYTHON   = "/home/labiiwa/miniconda3/envs/data4robotics_py310/bin/python3"
-_EVAL_DIR       = "/home/labiiwa/Point2Skill_github/dit-policy/eval_scripts"
-_BC_BASE        = "/home/labiiwa/Point2Skill_github/dit-policy/bc_finetune"
+_CONDA_PYTHON   = os.environ.get(
+    "POINT2SKILL_CONDA_PYTHON",
+    "/home/labiiwa/miniconda3/envs/data4robotics_py310/bin/python3",
+)
+_EVAL_DIR       = os.environ.get(
+    "POINT2SKILL_EVAL_DIR",
+    "/home/labiiwa/Point2Skill_github/policy/eval_scripts",
+)
+_BC_BASE        = os.environ.get(
+    "POINT2SKILL_BC_BASE",
+    "/home/labiiwa/Point2Skill_github/policy/bc_finetune",
+)
+# Checkpoints anteriores al rename dit-policy→policy siguen viviendo en este
+# repo standalone, sin relación con Point2Skill_github.
+_LEGACY_CKPT_ROOT = os.environ.get(
+    "POINT2SKILL_LEGACY_CKPT_ROOT",
+    "/home/labiiwa/dit-policy",
+)
 _GRIPPER_TOPIC  = "/franka_gripper/franka_gripper/move"
 _GRIPPER_OPEN   = "{width: 0.08, speed: 0.1}"
 
@@ -45,23 +60,6 @@ def _policy(script_key, ckpt, args, q_start=None, home_q=None):
 # └─────────────────┴────────────────────────────────────────────────────────┘
 MODELS = {
 
-# Auto lift barik
-#     "open": _policy(
-#         "contact",
-#         f"{_BC_BASE}/open/wandb_None_franka_2cam_contact_resnet_gn_2026-06-09_14-25-12/open.ckpt",
-#         args    = ["--gamma", "1.0", "--T", "500", "--action_idx", "3", "--lift_scale", "4.0"],
-#         q_start = [-0.07029999792575836, -1.2699999809265137,  0.16349999606609344,
-#                    -2.759500026702881,    0.20419999957084656,  1.79830002784729,
-#                    -2.3066000938415527],
-#         home_q  =  [-0.3440000116825104, -0.2078000009059906, 0.2944999933242798, -2.658799886703491, 0.16580000519752502, 2.3619000911712646, -2.5455000400543213]
-# ,
-#     ),
-
-# q_start zaharra: [-0.07029999792575836, -1.2699999809265137,  0.16349999606609344,
-#                    -2.759500026702881,    0.20419999957084656,  1.79830002784729,
-#                    -2.3066000938415527]
-
-
     "open": _policy(
         "contact",
         f"{_BC_BASE}/open/wandb_None_franka_2cam_contact_resnet_gn_2026-06-09_14-25-12/open.ckpt",
@@ -85,7 +83,6 @@ MODELS = {
     "pick_coffee": _policy(
         "contact",
         f"{_BC_BASE}/pick_coffee/wandb_None_franka_2cam_contact_resnet_gn_2026-06-12_17-35-22/pick_coffee.ckpt",
-        #f"{_BC_BASE}/pick_coffee/wandb_None_franka_2cam_contact_resnet_gn_2026-06-10_10-53-01/pick_coffee.ckpt",
 
         args    = ["--gamma", "1.0", "--T", "500", "--action_idx", "3",
                    "--auto_lift", "--grasp_confirm_steps", "3", "--lift_trigger", "0.04"],
@@ -99,7 +96,7 @@ MODELS = {
 
     "place_drawer": _policy(
         "contact_place",
-        "/home/labiiwa/dit-policy/bc_finetune/place_drawer"
+        f"{_LEGACY_CKPT_ROOT}/bc_finetune/place_drawer"
         "/wandb_None_franka_2cam_contact_resnet_gn_2026-06-10_12-51-05/place_drawer.ckpt",
         args = [
             "--task_mode",                 "place",
@@ -114,10 +111,10 @@ MODELS = {
             "--place_open_cmd_threshold",  "0.06",
             "--place_close_cmd_threshold", "0.02",
             "--ac_norm_path",
-            "/home/labiiwa/dit-policy/bc_finetune/place_drawer"
+            f"{_LEGACY_CKPT_ROOT}/bc_finetune/place_drawer"
             "/wandb_None_franka_2cam_contact_resnet_gn_2026-06-10_12-51-05/ac_norm.json",
             "--contact_norm_path",
-            "/home/labiiwa/dit-policy/bc_finetune/place_drawer"
+            f"{_LEGACY_CKPT_ROOT}/bc_finetune/place_drawer"
             "/wandb_None_franka_2cam_contact_resnet_gn_2026-06-10_12-51-05/contact_norm.json",
         ],
         q_start = [-0.21559999883174896, -0.618399977684021,  -0.03420000150799751,
