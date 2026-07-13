@@ -9,10 +9,6 @@ python3 convert_to_robobuf_contact_hindsight.py \
   --dedup_static
 
 
-- 170mm no depth:
-
-python3 convert_to_robobuf_contact_hindsight_copy.py     --dataset_dir /home/labiiwa/dit_demos/pick_generalization     --out_path /home/labiiwa/Point2Skill_github/dit-policy/data_robobuf/pick_generalization_4poses.pkl     --hand_eye_yaml /home/labiiwa/Point2Skill_github/dit-policy/converters/my_data/hand_eye_result.yaml     --trim_start_motion     --dedup_static
-
 
 python3 convert_to_robobuf_place_hindsight.py \
   --dataset_dir /home/labiiwa/dit_demos/place_experiment \
