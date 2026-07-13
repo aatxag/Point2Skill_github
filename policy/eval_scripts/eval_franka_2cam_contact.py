@@ -124,7 +124,11 @@ def _load_logo():
 
 def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     """
-    Interface for clicking the point
+    UI blanca con logo Point2Skill para seleccionar el pixel de contacto.
+    Panel izquierdo: imagen + crosshair en vivo.
+    Panel derecho: cursor, depth y punto seleccionado.
+    Se cierra 1 s después del click.
+    Devuelve (u, v) en coordenadas 256×256, o None si se cierra sin click.
     """
     rgb_display = rgb_256[:, :, ::-1].copy()   # BGR → RGB
     valid_mask  = (depth_256 > 0) & (depth_256 < DEPTH_MAX_VALID_MM)
@@ -139,7 +143,7 @@ def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     HEADER_BOTTOM = 0.80
     DIVIDER_Y     = HEADER_BOTTOM - 0.006
 
-
+    # ── Logo (fondo blanco, se ve perfecto) ──────────────────────────────
     if logo_rgb is not None:
         ax_logo = fig.add_axes([0.012, HEADER_BOTTOM + 0.010,
                                 0.40,  HEADER_TOP - HEADER_BOTTOM - 0.014])
@@ -187,7 +191,7 @@ def pick_contact_pixel(rgb_256: np.ndarray, depth_256: np.ndarray):
     ax.text(2, 253, "256×256", fontsize=6, color=_W_DIM,
             fontfamily="monospace", va="bottom")
 
-
+    # Crosshair en vivo
     hline = ax.axhline(-999, color=_W_ACCENT2, linewidth=0.8,
                         alpha=0.7, linestyle="--")
     vline = ax.axvline(-999, color=_W_ACCENT2, linewidth=0.8,
@@ -573,7 +577,7 @@ class Policy:
         return current + delta
 
 
-# ── Auto-lift helper ─────────────────────────────────────────────────────────
+# ── Homing helper ─────────────────────────────────────────────────────────────
 
 def go_to_home(env, q_home, hz=5.0, dq_max=0.05, q_thresh=0.05, timeout=30.0):
     """Move arm to q_home via impedance control, keeping gripper closed."""
@@ -581,15 +585,15 @@ def go_to_home(env, q_home, hz=5.0, dq_max=0.05, q_thresh=0.05, timeout=30.0):
                       FR3_JOINT_LIMITS_LOW[:7], FR3_JOINT_LIMITS_HIGH[:7])
     period  = 1.0 / hz
     t0      = time.time()
-    print(f"\n[AUTO_LIFT] Moving to home position: {np.round(q_home, 4).tolist()}")
+    print(f"\n[HOME] Moving to home position: {np.round(q_home, 4).tolist()}")
     while True:
         current_q = env.node.get_q()
         err       = np.abs(current_q - q_home)
         if err.max() < q_thresh:
-            print(f"[AUTO_LIFT] Reached home (max_err={err.max():.4f} rad)")
+            print(f"[HOME] Reached home (max_err={err.max():.4f} rad)")
             break
         if time.time() - t0 > timeout:
-            print(f"[AUTO_LIFT] Timeout ({timeout:.0f}s) — stopping")
+            print(f"[HOME] Timeout ({timeout:.0f}s) — stopping")
             break
         delta = np.clip(q_home - current_q, -dq_max, dq_max)
         q_cmd = np.clip(current_q + delta,
@@ -597,7 +601,7 @@ def go_to_home(env, q_home, hz=5.0, dq_max=0.05, q_thresh=0.05, timeout=30.0):
         try:
             env.node.publish_impedance_target(q_cmd)
         except Exception:
-            print("[AUTO_LIFT] Publisher context lost — stopping go_to_home cleanly.")
+            print("[HOME] Publisher context lost — stopping go_to_home cleanly.")
             return
         time.sleep(period)
     try:
@@ -658,27 +662,10 @@ def main():
     parser.add_argument("--dump_obs",     default=None,
                         help="If set, save per-step observations to this .pkl file.")
 
-    parser.add_argument("--auto_lift", action="store_true",
-                        help="Una vez el gripper lleva --grasp_confirm_steps cerrado, "
-                             "para la política y sube el brazo a --home_q.")
-    parser.add_argument("--grasp_confirm_steps", default=5, type=int,
-                        help="Nº de steps con gripper cerrado para activar auto_lift.")
-    parser.add_argument("--grasp_reset_threshold", default=0.04, type=float,
-                        help="El contador de grasp solo se resetea si el gripper "
-                             "supera este umbral (>lift_trigger). Evita resets por "
-                             "fluctuaciones de epsilon. Default 0.04 m.")
-    _DEFAULT_HOME_Q = [
-        -0.2418999969959259, -0.9351000189781189,  0.40959998965263367,
-        -2.68149995803833,    0.3328999876976013,   1.8049999475479126,
-        -2.376499891281128,
-    ]
-    parser.add_argument("--home_q", nargs=7, type=float, default=_DEFAULT_HOME_Q, metavar="Q",
-                        help="Posición articular de home (7 valores en rad) usada por auto_lift.")
     parser.add_argument("--home_hz",     default=5.0,  type=float)
     parser.add_argument("--home_dq_max", default=0.05, type=float)
 
-    _DEFAULT_Q_START =  [-0.12380000203847885, -0.44929999113082886, 0.17309999465942383, -2.3773999214172363, 0.05490000173449516, 1.8610999584197998, -2.299299955368042]
-
+    _DEFAULT_Q_START =  [-0.04805493354797363, -0.7198628187179565, -0.1283571571111679, -2.4036147594451904, -0.051057759672403336, 1.7303017377853394, -2.499288558959961]
 
 
 
@@ -755,8 +742,6 @@ def main():
         print(f"[ROLLOUT {rollout_num}] Start q: {np.round(q_start, 4).tolist()}")
         print(f"[ROLLOUT {rollout_num}] Starting — {args.T} steps")
 
-        grasp_steps    = 0     # consecutive steps with gripper confirmed closed
-
         for t in range(args.T):
             measured_gripper = float(env.node.get_gripper())
             T_ee_to_base     = env.get_ee_T()
@@ -804,20 +789,6 @@ def main():
                 })
 
             obs = env.step(action)
-
-            # ── Auto-lift: para la política y sube una vez agarrado ───────────
-            if args.auto_lift:
-                if measured_gripper < args.lift_trigger:
-                    grasp_steps += 1
-                elif measured_gripper > args.grasp_reset_threshold:
-                    # Only reset if gripper is clearly open — ignores epsilon fluctuations
-                    grasp_steps = 0
-
-                if grasp_steps >= args.grasp_confirm_steps:
-                    print(f"\n[AUTO_LIFT] Gripper cerrado {grasp_steps} steps → parando política")
-                    q_home = np.array(args.home_q, dtype=np.float32)
-                    go_to_home(env, q_home, hz=args.home_hz, dq_max=args.home_dq_max)
-                    break
 
         if args.dump_obs is not None:
             dump_path = Path(args.dump_obs)

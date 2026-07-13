@@ -5,8 +5,8 @@ import os
 import subprocess
 import sys
 
+DIT_DIR    = "/home/labiiwa/Point2Skill_github/policy"
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DIT_DIR    = os.environ.get("POINT2SKILL_POLICY_DIR", _SCRIPT_DIR)
 RN_WEIGHTS = f"{DIT_DIR}/visual_features/resnet18/IN_1M_resnet18.pth"
 
 # img_chunk se define por run — no va en COMMON
@@ -24,11 +24,11 @@ COMMON = [
     "save_freq=500",
     "devices=1",
     "wandb.entity=aatxag-mondragon-university",
-    "wandb.project=policy",
+    "wandb.project=dit-policy",
 ]
 
-_BUF_GEN1 = f"{DIT_DIR}/data_robobuf/place_egg/buf.pkl"
-_BUF_GEN2  = f"{DIT_DIR}/data_robobuf/place_egg_v2/buf.pkl"
+_BUF_GEN1 = f"{DIT_DIR}/data_robobuf/github_refresh/buf.pkl"
+_BUF_GEN2  = f"{DIT_DIR}/data_robobuf/generalization_fourposes/buf.pkl"
 
 _EXTRA_CONTACT = [
     "agent=diffusion_contact",
@@ -48,14 +48,8 @@ RUNS = [
 
     {
         "script":      "finetune_contact.py",
-        "exp_name":    "place_egg",
+        "exp_name":    "github_refresh",
         "buffer_path": _BUF_GEN1,
-        "extra":       _EXTRA_CONTACT + ["img_chunk=1"],
-    },
-        {
-        "script":      "finetune_contact.py",
-        "exp_name":    "place_egg_v2",
-        "buffer_path": _BUF_GEN2,
         "extra":       _EXTRA_CONTACT + ["img_chunk=1"],
     },
 

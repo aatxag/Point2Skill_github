@@ -5,7 +5,7 @@ import os
 import subprocess
 import sys
 
-DIT_DIR    = "/home/labiiwa/Point2Skill_github/dit-policy"
+DIT_DIR    = "/home/labiiwa/Point2Skill_github/policy"
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 RN_WEIGHTS = f"{DIT_DIR}/visual_features/resnet18/IN_1M_resnet18.pth"
 
@@ -27,7 +27,7 @@ COMMON = [
     "wandb.project=dit-policy",
 ]
 
-_BUF_GEN1 = f"{DIT_DIR}/data_robobuf/place_drawer/buf.pkl"
+_BUF_GEN1 = f"{DIT_DIR}/data_robobuf/github_refresh/buf.pkl"
 _BUF_GEN2  = f"{DIT_DIR}/data_robobuf/generalization_fourposes/buf.pkl"
 
 _EXTRA_CONTACT = [
@@ -48,7 +48,7 @@ RUNS = [
 
     {
         "script":      "finetune_contact.py",
-        "exp_name":    "place_drawer_contact",
+        "exp_name":    "github_refresh",
         "buffer_path": _BUF_GEN1,
         "extra":       _EXTRA_CONTACT + ["img_chunk=1"],
     },
