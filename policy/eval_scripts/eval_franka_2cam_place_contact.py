@@ -12,7 +12,7 @@ Workflow per rollout:
        when the policy predicts release, a real Franka gripper Move action opens to 0.08 m
 
 Usage:
-  python eval_franka_2cam_contact.py path/to/checkpoint.ckpt \\
+  python eval_franka_2cam_place_contact.py path/to/checkpoint.ckpt \\
       --hand_eye my_data/hand_eye_result.yaml
 """
 
@@ -34,7 +34,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import yaml
-from scipy.spatial.transform import Rotation
 
 from eval_franka_env_2cam_contact import make_fr3_env_2cam_contact
 
@@ -61,6 +60,15 @@ D435I_FX = 181.685
 D435I_FY = 322.924
 D435I_CX = 129.035
 D435I_CY = 131.825
+
+# ── Release execution (hardware plumbing) ─────────────────────────────────────
+# The gripper open at release is executed as a real Franka Move action
+# (equivalent to: ros2 action send_goal <topic> franka_msgs/action/Move
+# "{width: <open_width>, speed: <gripper_speed>}"). Edit these if your
+# gripper action server lives in a different namespace.
+RELEASE_TOPIC        = "/franka_gripper/franka_gripper/move"
+RELEASE_TIMEOUT_S    = 4.0   # max wait for the ros2 action CLI result
+RELEASE_LIFT_DELAY_S = 0.25  # settle time after the open command, before homing
 
 
 # ── Geometry helpers ──────────────────────────────────────────────────────────
@@ -613,23 +621,17 @@ class ExplicitPlaceRelease:
 
     def __init__(
         self,
-        enabled: bool,
-        topic: str,
         open_width: float,
         speed: float,
         pred_threshold: float,
         confirm_steps: int,
-        timeout: float,
-        stop_policy: bool,
     ):
-        self.enabled = enabled
-        self.topic = topic
+        self.topic = RELEASE_TOPIC
         self.open_width = float(open_width)
         self.speed = float(speed)
         self.pred_threshold = float(pred_threshold)
         self.confirm_steps = int(confirm_steps)
-        self.timeout = float(timeout)
-        self.stop_policy = bool(stop_policy)
+        self.timeout = RELEASE_TIMEOUT_S
         self._open_votes = 0
         self.released = False
 
@@ -638,7 +640,7 @@ class ExplicitPlaceRelease:
         Returns True exactly when release has been triggered. Uses the denormalized
         policy prediction, and also accepts the filtered action as a backup signal.
         """
-        if not self.enabled or self.released:
+        if self.released:
             return False
 
         wants_open = (
@@ -685,7 +687,7 @@ class ExplicitPlaceRelease:
         except FileNotFoundError:
             print(
                 "[PLACE_RELEASE] ERROR: 'ros2' command not found. Source your ROS 2 "
-                "workspace before running this script, or disable --explicit_release."
+                "workspace before running this script."
             )
 
 
@@ -704,8 +706,7 @@ def main():
     parser.add_argument("--pred_horizon",  default=8,    type=int)
     parser.add_argument("--gamma",         default=0.85, type=float)
     parser.add_argument("--action_idx",    default=0,    type=int,
-                        help="Which step of the ac_chunk to execute (0=first).)
-    parser.add_argument("--lift_trigger",  default=0.04, type=float)
+                        help="Which step of the ac_chunk to execute (0=first).")
     parser.add_argument("--contact_debug", action="store_true",
                         help="Print normalized place target at each step.")
 
@@ -730,36 +731,14 @@ def main():
     parser.add_argument("--gripper_epsilon_inner", default=0.005,  type=float)
     parser.add_argument("--gripper_epsilon_outer", default=0.03,  type=float)
 
-    parser.add_argument("--explicit_release", action="store_true", default=True,
-                        help="When the policy predicts open, send a real "
-                             "Franka Move action to --release_width. Enabled by default.")
-    parser.add_argument("--no_explicit_release", dest="explicit_release", action="store_false",
-                        help="Disable explicit Franka gripper Move release and use env.step only.")
-    parser.add_argument("--release_topic",
-                        default="/franka_gripper/franka_gripper/move",
-                        help="Franka gripper Move action topic used for place release.")
-    parser.add_argument("--release_width", default=0.08, type=float,
-                        help="Width sent to franka_msgs/action/Move when releasing.")
-    parser.add_argument("--release_speed", default=0.1, type=float,
-                        help="Speed sent to franka_msgs/action/Move when releasing.")
+    # Release execution: the policy's predicted gripper width is thresholded
+    # and, once confirmed, executed as a real Franka Move action (see
+    # ExplicitPlaceRelease). After the release the arm returns home.
     parser.add_argument("--release_pred_threshold", default=0.06, type=float,
-                        help="Trigger explicit release when denormalized predicted gripper "
-                             "or filtered action is above this width.")
+                        help="Trigger the release when the denormalized predicted gripper "
+                             "or the filtered action is above this width (m).")
     parser.add_argument("--release_confirm_steps", default=2, type=int,
-                        help="Consecutive open predictions required before sending release.")
-    parser.add_argument("--release_timeout", default=4.0, type=float,
-                        help="Seconds to wait for the ros2 action CLI result.")
-    parser.add_argument("--release_stop_policy", action="store_true", default=False,
-                        help="Stop the rollout immediately after explicit release. Disabled by default.")
-    parser.add_argument("--no_release_stop_policy", dest="release_stop_policy", action="store_false",
-                        help="Keep executing the policy after explicit release unless --release_auto_lift is enabled.")
-    parser.add_argument("--release_auto_lift", action="store_true", default=True,
-                        help="After explicit release, stop the policy and move the arm to --home_q "
-                             "or to the rollout start q. Enabled by default for place.")
-    parser.add_argument("--no_release_auto_lift", dest="release_auto_lift", action="store_false",
-                        help="After release, keep executing the place policy instead of going home.")
-    parser.add_argument("--release_lift_delay", default=0.25, type=float,
-                        help="Seconds to wait after the open command before moving home.")
+                        help="Consecutive open predictions required before sending the release.")
 
     parser.add_argument("--ac_norm_path", default=None,
                         help="Override path to ac_norm.json.")
@@ -768,15 +747,6 @@ def main():
     parser.add_argument("--dump_obs",     default=None,
                         help="If set, save per-step observations to this .pkl file.")
 
-    parser.add_argument("--auto_lift", action="store_true",
-                        help="Legacy grasp-style auto-lift: once the gripper is closed for "
-                             "--grasp_confirm_steps, stop the policy and move to --home_q.")
-    parser.add_argument("--grasp_confirm_steps", default=5, type=int,
-                        help="Nº de steps con gripper cerrado para activar auto_lift.")
-    parser.add_argument("--grasp_reset_threshold", default=0.04, type=float,
-                        help="El contador de grasp solo se resetea si el gripper "
-                             "supera este umbral (>lift_trigger). Evita resets por "
-                             "fluctuaciones de epsilon. Default 0.04 m.")
     parser.add_argument("--home_hz",      default=10.0, type=float)
     parser.add_argument("--home_dq_max",  default=0.12, type=float)
     parser.add_argument("--lift_joints",  nargs="+", type=int, default=[1, 3],
@@ -856,12 +826,8 @@ def main():
             debug=args.contact_debug,
         )
 
-        # Important for place: do not reset automatically after selecting the
-        # target, because reset routines often open/reset the gripper and can drop
-        # or disturb the object. Use --reset_after_click only if your env.reset()
-        # is known to be safe for place rollouts.
-        if args.reset_after_click:
-            obs = env.reset()
+        # Important for place: do not reset after selecting the target — reset
+        # routines open/reset the gripper and would drop the held object.
         policy.reset()
         dump_steps = []
 
@@ -869,16 +835,11 @@ def main():
         print(f"[ROLLOUT {rollout_num}] Starting — {args.T} steps")
 
         releaser = ExplicitPlaceRelease(
-            enabled=args.explicit_release,
-            topic=args.release_topic,
-            open_width=args.release_width,
-            speed=args.release_speed,
+            open_width=args.open_width,
+            speed=args.gripper_speed,
             pred_threshold=args.release_pred_threshold,
             confirm_steps=args.release_confirm_steps,
-            timeout=args.release_timeout,
-            stop_policy=args.release_stop_policy,
         )
-        grasp_steps    = 0     # consecutive steps with gripper confirmed closed
 
         for t in range(args.T):
             measured_gripper = float(env.node.get_gripper())
@@ -908,7 +869,7 @@ def main():
                 action_gripper=float(action[7]),
             )
             if releaser.released:
-                action[7] = args.release_width
+                action[7] = args.open_width
             current_q = obs.observation["qpos"][:7]
             delta = action[:7] - current_q
             p_ee_norm = contact_tensor[0].cpu().numpy()
@@ -940,34 +901,15 @@ def main():
 
             obs = env.step(action)
 
-            if release_now and args.release_auto_lift:
-                # Place behavior: once the object has been released with the real
-                # Franka Move action, stop the diffusion policy and take the arm
-                # back to the home/start configuration. The gripper remains open.
-                if args.release_lift_delay > 0:
-                    time.sleep(args.release_lift_delay)
+            if release_now:
+                # Once the object has been released with the real Franka Move
+                # action, stop the diffusion policy and take the arm back to
+                # the home/start configuration. The gripper remains open.
+                time.sleep(RELEASE_LIFT_DELAY_S)
                 print("\n[PLACE_RELEASE] Release done → returning to place-ready position")
                 go_to_home(env, q_home, hz=args.home_hz, dq_max=args.home_dq_max,
                            lift_joints=args.lift_joints)
                 break
-
-            if release_now and releaser.stop_policy:
-                print("[PLACE_RELEASE] Release done → stopping rollout")
-                break
-
-            # ── Auto-lift: para la política y sube una vez agarrado ───────────
-            if args.auto_lift:
-                if measured_gripper < args.lift_trigger:
-                    grasp_steps += 1
-                elif measured_gripper > args.grasp_reset_threshold:
-                    # Only reset if gripper is clearly open — ignores epsilon fluctuations
-                    grasp_steps = 0
-
-                if grasp_steps >= args.grasp_confirm_steps:
-                    print(f"\n[AUTO_LIFT] Gripper cerrado {grasp_steps} steps → parando política")
-                    go_to_home(env, q_home, hz=args.home_hz, dq_max=args.home_dq_max,
-                               lift_joints=args.lift_joints)
-                    break
 
         if args.dump_obs is not None:
             dump_path = Path(args.dump_obs)
