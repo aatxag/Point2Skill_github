@@ -553,7 +553,6 @@ class Policy:
         self,
         obs: dict,
         pred_norm: np.ndarray,
-        measured_gripper: float,
     ) -> np.ndarray:
         last_ac = self.last_ac if self.last_ac is not None else pred_norm
         self.last_ac = self.args.gamma * pred_norm + (1.0 - self.args.gamma) * last_ac
@@ -564,15 +563,6 @@ class Policy:
         current = obs["qpos"]
         delta   = target - current
         delta[:7] = np.clip(delta[:7], -self.args.dq_limit, self.args.dq_limit)
-
-        # Amplify arm delta once gripper confirms physically closed
-        if measured_gripper < self.args.lift_trigger:
-            delta[:7] = np.clip(
-                delta[:7] * self.args.lift_scale,
-                -self.args.dq_limit,
-                self.args.dq_limit,
-            )
-
         delta[7:] = np.clip(delta[7:], -self.args.dg_limit, self.args.dg_limit)
         return current + delta
 
@@ -628,11 +618,9 @@ def main():
     parser.add_argument("--action_idx",    default=0,    type=int,
                         help="Which step of the ac_chunk to execute (0=first). "
                              "Try 2-4 if robot stalls post-grasp.")
-    parser.add_argument("--lift_scale",    default=1.0,  type=float,
-                        help="Multiply arm delta by this when gripper confirms closed.")
     parser.add_argument("--lift_trigger",  default=0.04, type=float,
-                        help="Measured gripper width (m) that activates lift_scale "
-                             "and freezes the contact anchor.")
+                        help="Measured gripper width (m) that freezes the contact "
+                             "anchor on physical close.")
 
     parser.add_argument("--hz",            default=10.0, type=float)
     parser.add_argument("--dq_limit",      default=0.15, type=float)
@@ -755,7 +743,7 @@ def main():
             # Infer and select action
             preds     = policy._infer(obs.observation, contact_tensor)
             pred_norm = preds[min(args.action_idx, len(preds) - 1)]
-            action    = policy.forward(obs.observation, pred_norm, measured_gripper)
+            action    = policy.forward(obs.observation, pred_norm)
 
             # Logging
             pred_g_denorm = pred_norm[7] * policy.scale[7] + policy.loc[7]

@@ -533,7 +533,6 @@ class Policy:
         self,
         obs: dict,
         pred_norm: np.ndarray,
-        measured_gripper: float,
     ) -> np.ndarray:
         last_ac = self.last_ac if self.last_ac is not None else pred_norm
         self.last_ac = self.args.gamma * pred_norm + (1.0 - self.args.gamma) * last_ac
@@ -544,17 +543,6 @@ class Policy:
         current = obs["qpos"]
         delta   = target - current
         delta[:7] = np.clip(delta[:7], -self.args.dq_limit, self.args.dq_limit)
-
-        # For place policies this should normally be disabled: the gripper is
-        # already closed at the start, so a grasp-style "post-close lift boost"
-        # would be active from step 0. Keep it only as an explicit option.
-        if self.args.enable_closed_gripper_arm_scale and measured_gripper < self.args.lift_trigger:
-            delta[:7] = np.clip(
-                delta[:7] * self.args.lift_scale,
-                -self.args.dq_limit,
-                self.args.dq_limit,
-            )
-
         delta[7:] = np.clip(delta[7:], -self.args.dg_limit, self.args.dg_limit)
         return current + delta
 
@@ -720,14 +708,9 @@ def main():
     parser.add_argument("--action_idx",    default=0,    type=int,
                         help="Which step of the ac_chunk to execute (0=first). "
                              "Try 2-4 if robot stalls post-grasp.")
-    parser.add_argument("--lift_scale",    default=1.0,  type=float,
-                        help="Multiply arm delta by this when gripper is closed, only if "
-                             "--enable_closed_gripper_arm_scale is set.")
     parser.add_argument("--lift_trigger",  default=0.04, type=float,
-                        help="Measured gripper width (m) used only for optional closed-gripper "
-                             "arm scaling / optional auto_lift. It does NOT freeze the place anchor.")
-    parser.add_argument("--enable_closed_gripper_arm_scale", action="store_true",
-                        help="Grasp-style option. Usually leave disabled for place policies.")
+                        help="Measured gripper width (m) used only for the optional legacy "
+                             "auto_lift. It does NOT freeze the place anchor.")
     parser.add_argument("--reset_after_click", action="store_true",
                         help="Grasp-style option. For place, leave disabled so the object is not "
                              "disturbed after selecting the place target.")
@@ -806,10 +789,11 @@ def main():
     parser.add_argument("--home_dq_max",  default=0.12, type=float)
     parser.add_argument("--lift_joints",  nargs="+", type=int, default=[1, 3],
                         help="Joint indices moved first in phase-1 raise. Default: 1 3 (shoulder+elbow).")
-    _DEFAULT_Q_START_PLACE = [
-        -0.21559999883174896, -0.618399977684021,  -0.03420000150799751,
-        -2.454400062561035,    0.06509999930858612,  1.937600016593933,
-        -2.5927000045776367,
+    _DEFAULT_Q_START_PLACE = [-0.2722940742969513, -0.4978274703025818, 0.07207965850830078
+, -2.3805019855499268
+, -0.03881292790174484
+, 1.8746013641357422
+, -2.4673891067504883
     ]
     parser.add_argument("--q_start", nargs=7, type=float,
                         default=_DEFAULT_Q_START_PLACE, metavar="Q",
@@ -917,7 +901,7 @@ def main():
             # Infer and select action
             preds     = policy._infer(obs.observation, contact_tensor)
             pred_norm = preds[min(args.action_idx, len(preds) - 1)]
-            action    = policy.forward(obs.observation, pred_norm, measured_gripper)
+            action    = policy.forward(obs.observation, pred_norm)
 
             # Logging
             pred_g_denorm = pred_norm[7] * policy.scale[7] + policy.loc[7]
