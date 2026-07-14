@@ -484,8 +484,6 @@ class Policy:
         print(f"[INFO] ac_norm from : {ac_norm_path}")
         print(f"[INFO] loc          : {np.round(self.loc, 4)}")
         print(f"[INFO] scale        : {np.round(self.scale, 4)}")
-        print(f"[INFO] gripper  loc[7]={self.loc[7]:.4f}  scale[7]={self.scale[7]:.4f}"
-              f"  (expect loc≈0.0425, scale≈0.0375)")
         print(f"[INFO] contact_loc  : {np.round(self.contact_loc, 4)}")
         print(f"[INFO] contact_scale: {np.round(self.contact_scale, 4)}")
         print(f"[INFO] img_keys     : {self.img_keys}")
@@ -706,14 +704,8 @@ def main():
     parser.add_argument("--pred_horizon",  default=8,    type=int)
     parser.add_argument("--gamma",         default=0.85, type=float)
     parser.add_argument("--action_idx",    default=0,    type=int,
-                        help="Which step of the ac_chunk to execute (0=first). "
-                             "Try 2-4 if robot stalls post-grasp.")
-    parser.add_argument("--lift_trigger",  default=0.04, type=float,
-                        help="Measured gripper width (m) used only for the optional legacy "
-                             "auto_lift. It does NOT freeze the place anchor.")
-    parser.add_argument("--reset_after_click", action="store_true",
-                        help="Grasp-style option. For place, leave disabled so the object is not "
-                             "disturbed after selecting the place target.")
+                        help="Which step of the ac_chunk to execute (0=first).)
+    parser.add_argument("--lift_trigger",  default=0.04, type=float)
     parser.add_argument("--contact_debug", action="store_true",
                         help="Print normalized place target at each step.")
 
@@ -739,7 +731,7 @@ def main():
     parser.add_argument("--gripper_epsilon_outer", default=0.03,  type=float)
 
     parser.add_argument("--explicit_release", action="store_true", default=True,
-                        help="For place: when the policy predicts open, send a real "
+                        help="When the policy predicts open, send a real "
                              "Franka Move action to --release_width. Enabled by default.")
     parser.add_argument("--no_explicit_release", dest="explicit_release", action="store_false",
                         help="Disable explicit Franka gripper Move release and use env.step only.")
